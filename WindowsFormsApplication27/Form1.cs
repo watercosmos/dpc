@@ -307,7 +307,7 @@ namespace WindowsFormsApplication27
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex > 0)
+            if (listBox1.SelectedIndex >= 0)
             {
                 listBox1.SetSelected(0, false);
                 columnRefreshFlag = 1;
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication27
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-            if (listBox1.SelectedIndex > 0)
+            if (listBox1.SelectedIndex >= 0)
             {
                 label(listBox1.SelectedItem.ToString());
                 columnRefreshFlag = 0;
@@ -354,12 +354,7 @@ namespace WindowsFormsApplication27
             c1 = string.Format("{0:00000000}", d);
 
         }
-        private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            System.Environment.Exit(0);
-            serverSocket.Close();
-            serverSocket.Shutdown(SocketShutdown.Both);
-        }
+       
         private void label(string la)
         {
             aa = la;
@@ -473,39 +468,39 @@ namespace WindowsFormsApplication27
 
             if (label41.Text == "1")
             {
-                panel1.BackColor = Color.Red;
+                panel1.BackColor =  Color.LightSkyBlue;
             }
             if (label42.Text == "1")
             {
-                panel2.BackColor = Color.Red;
+                panel2.BackColor =  Color.LightSkyBlue;
             }
             if (label43.Text == "1")
             {
-                panel3.BackColor = Color.Red;
+                panel3.BackColor =  Color.LightSkyBlue;
             }
             if (label44.Text == "1")
             {
-                panel4.BackColor = Color.Red;
+                panel4.BackColor =  Color.LightSkyBlue;
             }
             if (label45.Text == "1")
             {
-                panel5.BackColor = Color.Red;
+                panel5.BackColor =  Color.LightSkyBlue;
             }
             if (label46.Text == "1")
             {
-                panel6.BackColor = Color.Red;
+                panel6.BackColor =  Color.LightSkyBlue;
             }
             if (label47.Text == "1")
             {
-                panel7.BackColor = Color.Red;
+                panel7.BackColor =  Color.LightSkyBlue;
             }
             if (label48.Text == "1")
             {
-                panel8.BackColor = Color.Red;
+                panel8.BackColor =  Color.LightSkyBlue;
             }
             if (label49.Text == "1")
             {
-                panel9.BackColor = Color.Red;
+                panel9.BackColor =  Color.LightSkyBlue;
             }
 
 
@@ -513,291 +508,291 @@ namespace WindowsFormsApplication27
 
             if (label50.Text == "1")
             {
-                panel10.BackColor = Color.Red;
+                panel10.BackColor =  Color.LightSkyBlue;
             }
             if (label51.Text == "1")
             {
-                panel11.BackColor = Color.Red;
+                panel11.BackColor =  Color.LightSkyBlue;
             }
             if (label52.Text == "1")
             {
-                panel12.BackColor = Color.Red;
+                panel12.BackColor =  Color.LightSkyBlue;
             }
             if (label53.Text == "1")
             {
-                panel13.BackColor = Color.Red;
+                panel13.BackColor =  Color.LightSkyBlue;
             }
             if (label54.Text == "1")
             {
-                panel14.BackColor = Color.Red;
+                panel14.BackColor =  Color.LightSkyBlue;
             }
             if (label55.Text == "1")
             {
-                panel15.BackColor = Color.Red;
+                panel15.BackColor =  Color.LightSkyBlue;
             }
             if (label56.Text == "1")
             {
-                panel16.BackColor = Color.Red;
+                panel16.BackColor =  Color.LightSkyBlue;
             }
             if (label57.Text == "1")
             {
-                panel17.BackColor = Color.Red;
+                panel17.BackColor =  Color.LightSkyBlue;
             }
             if (label58.Text == "1")
             {
-                panel18.BackColor = Color.Red;
+                panel18.BackColor =  Color.LightSkyBlue;
             }
             if (label59.Text == "1")
             {
-                panel19.BackColor = Color.Red;
+                panel19.BackColor =  Color.LightSkyBlue;
             }
             if (label60.Text == "1")
             {
-                panel20.BackColor = Color.Red;
+                panel20.BackColor =  Color.LightSkyBlue;
             }
             if (label61.Text == "1")
             {
-                panel21.BackColor = Color.Red;
+                panel21.BackColor =  Color.LightSkyBlue;
             }
             if (label62.Text == "1")
             {
-                panel22.BackColor = Color.Red;
+                panel22.BackColor =  Color.LightSkyBlue;
             }
             if (label63.Text == "1")
             {
-                panel23.BackColor = Color.Red;
+                panel23.BackColor =  Color.LightSkyBlue;
             } if (label64.Text == "1")
             {
-                panel24.BackColor = Color.Red;
+                panel24.BackColor =  Color.LightSkyBlue;
             }
             if (label65.Text == "1")
             {
-                panel25.BackColor = Color.Red;
+                panel25.BackColor =  Color.LightSkyBlue;
             }
             if (label66.Text == "1")
             {
-                panel26.BackColor = Color.Red;
+                panel26.BackColor =  Color.LightSkyBlue;
             }
             if (label67.Text == "1")
             {
-                panel27.BackColor = Color.Red;
+                panel27.BackColor =  Color.LightSkyBlue;
             }
             if (label68.Text == "1")
             {
-                panel28.BackColor = Color.Red;
+                panel28.BackColor =  Color.LightSkyBlue;
             }
             if (label69.Text == "1")
             {
-                panel29.BackColor = Color.Red;
+                panel29.BackColor =  Color.LightSkyBlue;
             }
             if (label70.Text == "1")
             {
-                panel30.BackColor = Color.Red;
+                panel30.BackColor =  Color.LightSkyBlue;
             } if (label71.Text == "1")
             {
-                panel31.BackColor = Color.Red;
+                panel31.BackColor =  Color.LightSkyBlue;
             }
             if (label72.Text == "1")
             {
-                panel32.BackColor = Color.Red;
+                panel32.BackColor =  Color.LightSkyBlue;
             }
             if (label73.Text == "1")
             {
-                panel33.BackColor = Color.Red;
+                panel33.BackColor =  Color.LightSkyBlue;
             }
             if (label74.Text == "1")
             {
-                panel34.BackColor = Color.Red;
+                panel34.BackColor =  Color.LightSkyBlue;
             }
             if (label75.Text == "1")
             {
-                panel35.BackColor = Color.Red;
+                panel35.BackColor =  Color.LightSkyBlue;
             }
             if (label76.Text == "1")
             {
-                panel36.BackColor = Color.Red;
+                panel36.BackColor =  Color.LightSkyBlue;
             }
             if (label77.Text == "1")
             {
-                panel37.BackColor = Color.Red;
+                panel37.BackColor =  Color.LightSkyBlue;
             }
             if (label78.Text == "1")
             {
-                panel38.BackColor = Color.Red;
+                panel38.BackColor =  Color.LightSkyBlue;
             }
             if (label79.Text == "1")
             {
-                panel39.BackColor = Color.Red;
+                panel39.BackColor =  Color.LightSkyBlue;
             }
             if (label80.Text == "1")
             {
-                panel40.BackColor = Color.Red;
+                panel40.BackColor =  Color.LightSkyBlue;
             }
 
             if (label41.Text == "0")
             {
-                panel1.BackColor = Color.LightGreen;
+                panel1.BackColor = Color.LightGray;
             }
             if (label42.Text == "0")
             {
-                panel2.BackColor = Color.LightGreen;
+                panel2.BackColor = Color.LightGray;
             }
             if (label43.Text == "0")
             {
-                panel3.BackColor = Color.LightGreen;
+                panel3.BackColor = Color.LightGray;
             }
             if (label44.Text == "0")
             {
-                panel4.BackColor = Color.LightGreen;
+                panel4.BackColor = Color.LightGray;
             }
             if (label45.Text == "0")
             {
-                panel5.BackColor = Color.LightGreen;
+                panel5.BackColor = Color.LightGray;
             }
             if (label46.Text == "0")
             {
-                panel6.BackColor = Color.LightGreen;
+                panel6.BackColor = Color.LightGray;
             }
             if (label47.Text == "0")
             {
-                panel7.BackColor = Color.LightGreen;
+                panel7.BackColor = Color.LightGray;
             }
             if (label48.Text == "0")
             {
-                panel8.BackColor = Color.LightGreen;
+                panel8.BackColor = Color.LightGray;
             }
             if (label49.Text == "0")
             {
-                panel9.BackColor = Color.LightGreen;
+                panel9.BackColor = Color.LightGray;
             }
             if (label50.Text == "0")
             {
-                panel10.BackColor = Color.LightGreen;
+                panel10.BackColor = Color.LightGray;
             }
             if (label51.Text == "0")
             {
-                panel11.BackColor = Color.LightGreen;
+                panel11.BackColor = Color.LightGray;
             }
             if (label52.Text == "0")
             {
-                panel12.BackColor = Color.LightGreen;
+                panel12.BackColor = Color.LightGray;
             }
             if (label53.Text == "0")
             {
-                panel13.BackColor = Color.LightGreen;
+                panel13.BackColor = Color.LightGray;
             }
             if (label54.Text == "0")
             {
-                panel14.BackColor = Color.LightGreen;
+                panel14.BackColor = Color.LightGray;
             }
             if (label55.Text == "0")
             {
-                panel15.BackColor = Color.LightGreen;
+                panel15.BackColor = Color.LightGray;
             }
             if (label56.Text == "0")
             {
-                panel16.BackColor = Color.LightGreen;
+                panel16.BackColor = Color.LightGray;
             }
             if (label57.Text == "0")
             {
-                panel17.BackColor = Color.LightGreen;
+                panel17.BackColor = Color.LightGray;
             }
             if (label58.Text == "0")
             {
-                panel18.BackColor = Color.LightGreen;
+                panel18.BackColor = Color.LightGray;
             }
             if (label59.Text == "0")
             {
-                panel19.BackColor = Color.LightGreen;
+                panel19.BackColor = Color.LightGray;
             }
             if (label60.Text == "0")
             {
-                panel20.BackColor = Color.LightGreen;
+                panel20.BackColor = Color.LightGray;
             }
             if (label61.Text == "0")
             {
-                panel21.BackColor = Color.LightGreen;
+                panel21.BackColor = Color.LightGray;
             }
             if (label62.Text == "0")
             {
-                panel22.BackColor = Color.LightGreen;
+                panel22.BackColor = Color.LightGray;
             }
             if (label63.Text == "0")
             {
-                panel23.BackColor = Color.LightGreen;
+                panel23.BackColor = Color.LightGray;
             } if (label64.Text == "0")
             {
-                panel24.BackColor = Color.LightGreen;
+                panel24.BackColor = Color.LightGray;
             }
             if (label65.Text == "0")
             {
-                panel25.BackColor = Color.LightGreen;
+                panel25.BackColor = Color.LightGray;
             }
             if (label66.Text == "0")
             {
-                panel26.BackColor = Color.LightGreen;
+                panel26.BackColor = Color.LightGray;
             }
             if (label67.Text == "0")
             {
-                panel27.BackColor = Color.LightGreen;
+                panel27.BackColor = Color.LightGray;
             }
             if (label68.Text == "0")
             {
-                panel28.BackColor = Color.LightGreen;
+                panel28.BackColor = Color.LightGray;
             }
             if (label69.Text == "0")
             {
-                panel29.BackColor = Color.LightGreen;
+                panel29.BackColor = Color.LightGray;
             }
             if (label70.Text == "0")
             {
-                panel30.BackColor = Color.LightGreen;
+                panel30.BackColor = Color.LightGray;
             } if (label71.Text == "0")
             {
-                panel31.BackColor = Color.LightGreen;
+                panel31.BackColor = Color.LightGray;
             }
             if (label72.Text == "0")
             {
-                panel32.BackColor = Color.LightGreen;
+                panel32.BackColor = Color.LightGray;
             }
             if (label73.Text == "0")
             {
-                panel33.BackColor = Color.LightGreen;
+                panel33.BackColor = Color.LightGray;
             }
             if (label74.Text == "0")
             {
-                panel34.BackColor = Color.LightGreen;
+                panel34.BackColor = Color.LightGray;
             }
             if (label75.Text == "0")
             {
-                panel35.BackColor = Color.LightGreen;
+                panel35.BackColor = Color.LightGray;
             }
             if (label76.Text == "0")
             {
-                panel36.BackColor = Color.LightGreen;
+                panel36.BackColor = Color.LightGray;
             }
             if (label77.Text == "0")
             {
-                panel37.BackColor = Color.LightGreen;
+                panel37.BackColor = Color.LightGray;
             }
             if (label78.Text == "0")
             {
-                panel38.BackColor = Color.LightGreen;
+                panel38.BackColor = Color.LightGray;
             }
             if (label79.Text == "0")
             {
-                panel39.BackColor = Color.LightGreen;
+                panel39.BackColor = Color.LightGray;
             }
             if (label80.Text == "0")
             {
-                panel40.BackColor = Color.LightGreen;
+                panel40.BackColor = Color.LightGray;
             }
          
         }
 
         private string rx_handler(byte[] rx_buf, int length)
         {
-            if (check_crc(rx_buf, length) == 0)
+            if (!check_crc(rx_buf, length))
                 return "";
 
             //store in file
@@ -990,333 +985,372 @@ namespace WindowsFormsApplication27
 
             if (label41.Text == "1")
             {
-                panel1.BackColor = Color.Red;
+                panel1.BackColor =  Color.LightSkyBlue;
             }
             if (label42.Text == "1")
             {
-                panel2.BackColor = Color.Red;
+                panel2.BackColor =  Color.LightSkyBlue;
             }
             if (label43.Text == "1")
             {
-                panel3.BackColor = Color.Red;
+                panel3.BackColor =  Color.LightSkyBlue;
             }
             if (label44.Text == "1")
             {
-                panel4.BackColor = Color.Red;
+                panel4.BackColor =  Color.LightSkyBlue;
             }
             if (label45.Text == "1")
             {
-                panel5.BackColor = Color.Red;
+                panel5.BackColor =  Color.LightSkyBlue;
             }
             if (label46.Text == "1")
             {
-                panel6.BackColor = Color.Red;
+                panel6.BackColor =  Color.LightSkyBlue;
             }
             if (label47.Text == "1")
             {
-                panel7.BackColor = Color.Red;
+                panel7.BackColor =  Color.LightSkyBlue;
             }
             if (label48.Text == "1")
             {
-                panel8.BackColor = Color.Red;
+                panel8.BackColor =  Color.LightSkyBlue;
             }
             if (label49.Text == "1")
             {
-                panel9.BackColor = Color.Red;
+                panel9.BackColor =  Color.LightSkyBlue;
             }
             if (label50.Text == "1")
             {
-                panel10.BackColor = Color.Red;
+                panel10.BackColor =  Color.LightSkyBlue;
             }
             if (label51.Text == "1")
             {
-                panel11.BackColor = Color.Red;
+                panel11.BackColor =  Color.LightSkyBlue;
             }
             if (label52.Text == "1")
             {
-                panel12.BackColor = Color.Red;
+                panel12.BackColor =  Color.LightSkyBlue;
             }
             if (label53.Text == "1")
             {
-                panel13.BackColor = Color.Red;
+                panel13.BackColor =  Color.LightSkyBlue;
             }
             if (label54.Text == "1")
             {
-                panel14.BackColor = Color.Red;
+                panel14.BackColor =  Color.LightSkyBlue;
             }
             if (label55.Text == "1")
             {
-                panel15.BackColor = Color.Red;
+                panel15.BackColor =  Color.LightSkyBlue;
             }
             if (label56.Text == "1")
             {
-                panel16.BackColor = Color.Red;
+                panel16.BackColor =  Color.LightSkyBlue;
             }
             if (label57.Text == "1")
             {
-                panel17.BackColor = Color.Red;
+                panel17.BackColor =  Color.LightSkyBlue;
             }
             if (label58.Text == "1")
             {
-                panel18.BackColor = Color.Red;
+                panel18.BackColor =  Color.LightSkyBlue;
             }
             if (label59.Text == "1")
             {
-                panel19.BackColor = Color.Red;
+                panel19.BackColor =  Color.LightSkyBlue;
             }
             if (label60.Text == "1")
             {
-                panel20.BackColor = Color.Red;
+                panel20.BackColor =  Color.LightSkyBlue;
             }
             if (label61.Text == "1")
             {
-                panel21.BackColor = Color.Red;
+                panel21.BackColor =  Color.LightSkyBlue;
             }
             if (label62.Text == "1")
             {
-                panel22.BackColor = Color.Red;
+                panel22.BackColor =  Color.LightSkyBlue;
             }
             if (label63.Text == "1")
             {
-                panel23.BackColor = Color.Red;
+                panel23.BackColor =  Color.LightSkyBlue;
             } if (label64.Text == "1")
             {
-                panel24.BackColor = Color.Red;
+                panel24.BackColor =  Color.LightSkyBlue;
             }
             if (label65.Text == "1")
             {
-                panel25.BackColor = Color.Red;
+                panel25.BackColor =  Color.LightSkyBlue;
             }
             if (label66.Text == "1")
             {
-                panel26.BackColor = Color.Red;
+                panel26.BackColor =  Color.LightSkyBlue;
             }
             if (label67.Text == "1")
             {
-                panel27.BackColor = Color.Red;
+                panel27.BackColor =  Color.LightSkyBlue;
             }
             if (label68.Text == "1")
             {
-                panel28.BackColor = Color.Red;
+                panel28.BackColor =  Color.LightSkyBlue;
             }
             if (label69.Text == "1")
             {
-                panel29.BackColor = Color.Red;
+                panel29.BackColor =  Color.LightSkyBlue;
             }
             if (label70.Text == "1")
             {
-                panel30.BackColor = Color.Red;
+                panel30.BackColor =  Color.LightSkyBlue;
             } if (label71.Text == "1")
             {
-                panel31.BackColor = Color.Red;
+                panel31.BackColor =  Color.LightSkyBlue;
             }
             if (label72.Text == "1")
             {
-                panel32.BackColor = Color.Red;
+                panel32.BackColor =  Color.LightSkyBlue;
             }
             if (label73.Text == "1")
             {
-                panel33.BackColor = Color.Red;
+                panel33.BackColor =  Color.LightSkyBlue;
             }
             if (label74.Text == "1")
             {
-                panel34.BackColor = Color.Red;
+                panel34.BackColor =  Color.LightSkyBlue;
             }
             if (label75.Text == "1")
             {
-                panel35.BackColor = Color.Red;
+                panel35.BackColor =  Color.LightSkyBlue;
             }
             if (label76.Text == "1")
             {
-                panel36.BackColor = Color.Red;
+                panel36.BackColor =  Color.LightSkyBlue;
             }
             if (label77.Text == "1")
             {
-                panel37.BackColor = Color.Red;
+                panel37.BackColor =  Color.LightSkyBlue;
             }
             if (label78.Text == "1")
             {
-                panel38.BackColor = Color.Red;
+                panel38.BackColor =  Color.LightSkyBlue;
             }
             if (label79.Text == "1")
             {
-                panel39.BackColor = Color.Red;
+                panel39.BackColor =  Color.LightSkyBlue;
             }
             if (label80.Text == "1")
             {
-                panel40.BackColor = Color.Red;
+                panel40.BackColor =  Color.LightSkyBlue;
             }
 
 
 
             if (label41.Text == "0")
             {
-                panel1.BackColor = Color.LightGreen;
+                panel1.BackColor = Color.LightGray;
             }
             if (label42.Text == "0")
             {
-                panel2.BackColor = Color.LightGreen;
+                panel2.BackColor = Color.LightGray;
             }
             if (label43.Text == "0")
             {
-                panel3.BackColor = Color.LightGreen;
+                panel3.BackColor = Color.LightGray;
             }
             if (label44.Text == "0")
             {
-                panel4.BackColor = Color.LightGreen;
+                panel4.BackColor = Color.LightGray;
             }
             if (label45.Text == "0")
             {
-                panel5.BackColor = Color.LightGreen;
+                panel5.BackColor = Color.LightGray;
             }
             if (label46.Text == "0")
             {
-                panel6.BackColor = Color.LightGreen;
+                panel6.BackColor = Color.LightGray;
             }
             if (label47.Text == "0")
             {
-                panel7.BackColor = Color.LightGreen;
+                panel7.BackColor = Color.LightGray;
             }
             if (label48.Text == "0")
             {
-                panel8.BackColor = Color.LightGreen;
+                panel8.BackColor = Color.LightGray;
             }
             if (label49.Text == "0")
             {
-                panel9.BackColor = Color.LightGreen;
+                panel9.BackColor = Color.LightGray;
             }
             if (label50.Text == "0")
             {
-                panel10.BackColor = Color.LightGreen;
+                panel10.BackColor = Color.LightGray;
             }
             if (label51.Text == "0")
             {
-                panel11.BackColor = Color.LightGreen;
+                panel11.BackColor = Color.LightGray;
             }
             if (label52.Text == "0")
             {
-                panel12.BackColor = Color.LightGreen;
+                panel12.BackColor = Color.LightGray;
             }
             if (label53.Text == "0")
             {
-                panel13.BackColor = Color.LightGreen;
+                panel13.BackColor = Color.LightGray;
             }
             if (label54.Text == "0")
             {
-                panel14.BackColor = Color.LightGreen;
+                panel14.BackColor = Color.LightGray;
             }
             if (label55.Text == "0")
             {
-                panel15.BackColor = Color.LightGreen;
+                panel15.BackColor = Color.LightGray;
             }
             if (label56.Text == "0")
             {
-                panel16.BackColor = Color.LightGreen;
+                panel16.BackColor = Color.LightGray;
             }
             if (label57.Text == "0")
             {
-                panel17.BackColor = Color.LightGreen;
+                panel17.BackColor = Color.LightGray;
             }
             if (label58.Text == "0")
             {
-                panel18.BackColor = Color.LightGreen;
+                panel18.BackColor = Color.LightGray;
             }
             if (label59.Text == "0")
             {
-                panel19.BackColor = Color.LightGreen;
+                panel19.BackColor = Color.LightGray;
             }
             if (label60.Text == "0")
             {
-                panel20.BackColor = Color.LightGreen;
+                panel20.BackColor = Color.LightGray;
             }
             if (label61.Text == "0")
             {
-                panel21.BackColor = Color.LightGreen;
+                panel21.BackColor = Color.LightGray;
             }
             if (label62.Text == "0")
             {
-                panel22.BackColor = Color.LightGreen;
+                panel22.BackColor = Color.LightGray;
             }
             if (label63.Text == "0")
             {
-                panel23.BackColor = Color.LightGreen;
+                panel23.BackColor = Color.LightGray;
             } if (label64.Text == "0")
             {
-                panel24.BackColor = Color.LightGreen;
+                panel24.BackColor = Color.LightGray;
             }
             if (label65.Text == "0")
             {
-                panel25.BackColor = Color.LightGreen;
+                panel25.BackColor = Color.LightGray;
             }
             if (label66.Text == "0")
             {
-                panel26.BackColor = Color.LightGreen;
+                panel26.BackColor = Color.LightGray;
             }
             if (label67.Text == "0")
             {
-                panel27.BackColor = Color.LightGreen;
+                panel27.BackColor = Color.LightGray;
             }
             if (label68.Text == "0")
             {
-                panel28.BackColor = Color.LightGreen;
+                panel28.BackColor = Color.LightGray;
             }
             if (label69.Text == "0")
             {
-                panel29.BackColor = Color.LightGreen;
+                panel29.BackColor = Color.LightGray;
             }
             if (label70.Text == "0")
             {
-                panel30.BackColor = Color.LightGreen;
+                panel30.BackColor = Color.LightGray;
             } if (label71.Text == "0")
             {
-                panel31.BackColor = Color.LightGreen;
+                panel31.BackColor = Color.LightGray;
             }
             if (label72.Text == "0")
             {
-                panel32.BackColor = Color.LightGreen;
+                panel32.BackColor = Color.LightGray;
             }
             if (label73.Text == "0")
             {
-                panel33.BackColor = Color.LightGreen;
+                panel33.BackColor = Color.LightGray;
             }
             if (label74.Text == "0")
             {
-                panel34.BackColor = Color.LightGreen;
+                panel34.BackColor = Color.LightGray;
             }
             if (label75.Text == "0")
             {
-                panel35.BackColor = Color.LightGreen;
+                panel35.BackColor = Color.LightGray;
             }
             if (label76.Text == "0")
             {
-                panel36.BackColor = Color.LightGreen;
+                panel36.BackColor = Color.LightGray;
             }
             if (label77.Text == "0")
             {
-                panel37.BackColor = Color.LightGreen;
+                panel37.BackColor = Color.LightGray;
             }
             if (label78.Text == "0")
             {
-                panel38.BackColor = Color.LightGreen;
+                panel38.BackColor = Color.LightGray;
             }
             if (label79.Text == "0")
             {
-                panel39.BackColor = Color.LightGreen;
+                panel39.BackColor = Color.LightGray;
             }
             if (label80.Text == "0")
             {
-                panel40.BackColor = Color.LightGreen;
+                panel40.BackColor = Color.LightGray;
             }
          
 
         }
-        int check_crc(byte[] rx_buf, int length)
-        {
-            /*byte crc[2];
 
-            crc [0] = rx_buf[length - 4]; //指向 crc 的第一个字节
-            crc [1] = rx_buf[length - 3];*/
-            return 1;
+        public ushort ComputeChecksum(byte[] bytes)
+        {
+            ushort crc = 0xFFFF;
+            const ushort poly = 4129;
+            ushort[] table = new ushort[256];
+            ushort temp, a;
+            for (int i = 0; i < table.Length; ++i)
+            {
+                temp = 0;
+                a = (ushort)(i << 8);
+                for (int j = 0; j < 8; ++j)
+                {
+                    if (((temp ^ a) & 0x8000) != 0)
+                    {
+                        temp = (ushort)((temp << 1) ^ poly);
+                    }
+                    else
+                    {
+                        temp <<= 1;
+                    }
+                    a <<= 1;
+                }
+                table[i] = temp;
+            }
+            for (int i = 0; i < bytes.Length; ++i)
+            {
+                crc = (ushort)((crc << 8) ^ table[((crc >> 8) ^ (0xff & bytes[i]))]);
+            }
+            return crc;
+        }
+
+        bool check_crc(byte[] rx_buf, int length)
+        {
+            List<byte> list = new List<byte>();
+            for (int i = 0; i < length - 4; i++)
+            {
+                list.Add(rx_buf[i]);
+
+            }
+            ushort culcrc = ComputeChecksum(list.ToArray());
+            ushort crc = (ushort)(rx_buf[length-4] * 256 + rx_buf[length-3]);
+            if (crc == culcrc)
+                return true;
+            else
+                return false;
         }
         public void ListBoxAutoCroll(ListBox lbox)
         {
@@ -1471,322 +1505,322 @@ namespace WindowsFormsApplication27
 
             if (label201.Text == "1")
             {
-                panel101.BackColor = Color.Red;
+                panel101.BackColor =  Color.LightSkyBlue;
             }
             if (label202.Text == "1")
             {
-                panel102.BackColor = Color.Red;
+                panel102.BackColor =  Color.LightSkyBlue;
             }
             if (label203.Text == "1")
             {
-                panel103.BackColor = Color.Red;
+                panel103.BackColor =  Color.LightSkyBlue;
             }
             if (label204.Text == "1")
             {
-                panel104.BackColor = Color.Red;
+                panel104.BackColor =  Color.LightSkyBlue;
             }
             if (label205.Text == "1")
             {
-                panel105.BackColor = Color.Red;
+                panel105.BackColor =  Color.LightSkyBlue;
             }
             if (label206.Text == "1")
             {
-                panel106.BackColor = Color.Red;
+                panel106.BackColor =  Color.LightSkyBlue;
             }
             if (label207.Text == "1")
             {
-                panel107.BackColor = Color.Red;
+                panel107.BackColor =  Color.LightSkyBlue;
             }
             if (label208.Text == "1")
             {
-                panel108.BackColor = Color.Red;
+                panel108.BackColor =  Color.LightSkyBlue;
             }
             if (label209.Text == "1")
             {
-                panel109.BackColor = Color.Red;
+                panel109.BackColor =  Color.LightSkyBlue;
             }
             if (label210.Text == "1")
             {
-                panel110.BackColor = Color.Red;
+                panel110.BackColor =  Color.LightSkyBlue;
             }
             if (label211.Text == "1")
             {
-                panel111.BackColor = Color.Red;
+                panel111.BackColor =  Color.LightSkyBlue;
             }
             if (label212.Text == "1")
             {
-                panel112.BackColor = Color.Red;
+                panel112.BackColor =  Color.LightSkyBlue;
             }
             if (label213.Text == "1")
             {
-                panel113.BackColor = Color.Red;
+                panel113.BackColor =  Color.LightSkyBlue;
             }
             if (label214.Text == "1")
             {
-                panel114.BackColor = Color.Red;
+                panel114.BackColor =  Color.LightSkyBlue;
             }
             if (label215.Text == "1")
             {
-                panel115.BackColor = Color.Red;
+                panel115.BackColor =  Color.LightSkyBlue;
             }
             if (label216.Text == "1")
             {
-                panel116.BackColor = Color.Red;
+                panel116.BackColor =  Color.LightSkyBlue;
             }
             if (label217.Text == "1")
             {
-                panel117.BackColor = Color.Red;
+                panel117.BackColor =  Color.LightSkyBlue;
             }
             if (label218.Text == "1")
             {
-                panel118.BackColor = Color.Red;
+                panel118.BackColor =  Color.LightSkyBlue;
             }
             if (label219.Text == "1")
             {
-                panel19.BackColor = Color.Red;
+                panel119.BackColor =  Color.LightSkyBlue;
             }
             if (label220.Text == "1")
             {
-                panel120.BackColor = Color.Red;
+                panel120.BackColor =  Color.LightSkyBlue;
             }
             if (label221.Text == "1")
             {
-                panel121.BackColor = Color.Red;
+                panel121.BackColor =  Color.LightSkyBlue;
             }
             if (label222.Text == "1")
             {
-                panel122.BackColor = Color.Red;
+                panel122.BackColor =  Color.LightSkyBlue;
             }
             if (label223.Text == "1")
             {
-                panel123.BackColor = Color.Red;
+                panel123.BackColor =  Color.LightSkyBlue;
             } if (label224.Text == "1")
             {
-                panel124.BackColor = Color.Red;
+                panel124.BackColor =  Color.LightSkyBlue;
             }
             if (label225.Text == "1")
             {
-                panel125.BackColor = Color.Red;
+                panel125.BackColor =  Color.LightSkyBlue;
             }
             if (label226.Text == "1")
             {
-                panel126.BackColor = Color.Red;
+                panel126.BackColor =  Color.LightSkyBlue;
             }
             if (label227.Text == "1")
             {
-                panel127.BackColor = Color.Red;
+                panel127.BackColor =  Color.LightSkyBlue;
             }
             if (label228.Text == "1")
             {
-                panel128.BackColor = Color.Red;
+                panel128.BackColor =  Color.LightSkyBlue;
             }
             if (label229.Text == "1")
             {
-                panel129.BackColor = Color.Red;
+                panel129.BackColor =  Color.LightSkyBlue;
             }
             if (label230.Text == "1")
             {
-                panel130.BackColor = Color.Red;
+                panel130.BackColor =  Color.LightSkyBlue;
             } if (label231.Text == "1")
             {
-                panel131.BackColor = Color.Red;
+                panel131.BackColor =  Color.LightSkyBlue;
             }
             if (label232.Text == "1")
             {
-                panel132.BackColor = Color.Red;
+                panel132.BackColor =  Color.LightSkyBlue;
             }
             if (label233.Text == "1")
             {
-                panel133.BackColor = Color.Red;
+                panel133.BackColor =  Color.LightSkyBlue;
             }
             if (label234.Text == "1")
             {
-                panel134.BackColor = Color.Red;
+                panel134.BackColor =  Color.LightSkyBlue;
             }
             if (label235.Text == "1")
             {
-                panel135.BackColor = Color.Red;
+                panel135.BackColor =  Color.LightSkyBlue;
             }
             if (label236.Text == "1")
             {
-                panel136.BackColor = Color.Red;
+                panel136.BackColor =  Color.LightSkyBlue;
             }
             if (label237.Text == "1")
             {
-                panel137.BackColor = Color.Red;
+                panel137.BackColor =  Color.LightSkyBlue;
             }
             if (label238.Text == "1")
             {
-                panel138.BackColor = Color.Red;
+                panel138.BackColor =  Color.LightSkyBlue;
             }
             if (label239.Text == "1")
             {
-                panel139.BackColor = Color.Red;
+                panel139.BackColor =  Color.LightSkyBlue;
             }
             if (label240.Text == "1")
             {
-                panel140.BackColor = Color.Red;
+                panel140.BackColor =  Color.LightSkyBlue;
             }
 
 
 
             if (label201.Text == "0")
             {
-                panel101.BackColor = Color.LightGreen;
+                panel101.BackColor = Color.LightGray;
             }
             if (label202.Text == "0")
             {
-                panel102.BackColor = Color.LightGreen;
+                panel102.BackColor = Color.LightGray;
             }
             if (label203.Text == "0")
             {
-                panel103.BackColor = Color.LightGreen;
+                panel103.BackColor = Color.LightGray;
             }
             if (label204.Text == "0")
             {
-                panel104.BackColor = Color.LightGreen;
+                panel104.BackColor = Color.LightGray;
             }
             if (label205.Text == "0")
             {
-                panel105.BackColor = Color.LightGreen;
+                panel105.BackColor = Color.LightGray;
             }
             if (label206.Text == "0")
             {
-                panel106.BackColor = Color.LightGreen;
+                panel106.BackColor = Color.LightGray;
             }
             if (label207.Text == "0")
             {
-                panel107.BackColor = Color.LightGreen;
+                panel107.BackColor = Color.LightGray;
             }
             if (label208.Text == "0")
             {
-                panel108.BackColor = Color.LightGreen;
+                panel108.BackColor = Color.LightGray;
             }
             if (label209.Text == "0")
             {
-                panel109.BackColor = Color.LightGreen; ;
+                panel109.BackColor = Color.LightGray; ;
             }
             if (label210.Text == "0")
             {
-                panel110.BackColor = Color.LightGreen;
+                panel110.BackColor = Color.LightGray;
             }
             if (label211.Text == "0")
             {
-                panel111.BackColor = Color.LightGreen;
+                panel111.BackColor = Color.LightGray;
             }
             if (label212.Text == "0")
             {
-                panel112.BackColor = Color.LightGreen;
+                panel112.BackColor = Color.LightGray;
             }
             if (label213.Text == "0")
             {
-                panel113.BackColor = Color.LightGreen;
+                panel113.BackColor = Color.LightGray;
             }
             if (label214.Text == "0")
             {
-                panel114.BackColor = Color.LightGreen;
+                panel114.BackColor = Color.LightGray;
             }
             if (label215.Text == "0")
             {
-                panel115.BackColor = Color.LightGreen;
+                panel115.BackColor = Color.LightGray;
             }
             if (label216.Text == "0")
             {
-                panel116.BackColor = Color.LightGreen;
+                panel116.BackColor = Color.LightGray;
             }
             if (label217.Text == "0")
             {
-                panel117.BackColor = Color.LightGreen;
+                panel117.BackColor = Color.LightGray;
             }
             if (label218.Text == "0")
             {
-                panel118.BackColor = Color.LightGreen;
+                panel118.BackColor = Color.LightGray;
             }
             if (label219.Text == "0")
             {
-                panel19.BackColor = Color.LightGreen;
+                panel119.BackColor = Color.LightGray;
             }
             if (label220.Text == "0")
             {
-                panel120.BackColor = Color.LightGreen;
+                panel120.BackColor = Color.LightGray;
             }
             if (label221.Text == "0")
             {
-                panel121.BackColor = Color.LightGreen;
+                panel121.BackColor = Color.LightGray;
             }
             if (label222.Text == "0")
             {
-                panel122.BackColor = Color.LightGreen;
+                panel122.BackColor = Color.LightGray;
             }
             if (label223.Text == "0")
             {
-                panel123.BackColor = Color.LightGreen;
+                panel123.BackColor = Color.LightGray;
             } if (label224.Text == "0")
             {
-                panel124.BackColor = Color.LightGreen;
+                panel124.BackColor = Color.LightGray;
             }
             if (label225.Text == "0")
             {
-                panel125.BackColor = Color.LightGreen;
+                panel125.BackColor = Color.LightGray;
             }
             if (label226.Text == "0")
             {
-                panel126.BackColor = Color.LightGreen;
+                panel126.BackColor = Color.LightGray;
             }
             if (label227.Text == "0")
             {
-                panel127.BackColor = Color.LightGreen;
+                panel127.BackColor = Color.LightGray;
             }
             if (label228.Text == "0")
             {
-                panel128.BackColor = Color.LightGreen;
+                panel128.BackColor = Color.LightGray;
             }
             if (label229.Text == "0")
             {
-                panel129.BackColor = Color.LightGreen;
+                panel129.BackColor = Color.LightGray;
             }
             if (label230.Text == "0")
             {
-                panel130.BackColor = Color.LightGreen;
+                panel130.BackColor = Color.LightGray;
             } if (label231.Text == "0")
             {
-                panel131.BackColor = Color.LightGreen;
+                panel131.BackColor = Color.LightGray;
             }
             if (label232.Text == "0")
             {
-                panel132.BackColor = Color.LightGreen;
+                panel132.BackColor = Color.LightGray;
             }
             if (label233.Text == "0")
             {
-                panel133.BackColor = Color.LightGreen;
+                panel133.BackColor = Color.LightGray;
             }
             if (label234.Text == "0")
             {
-                panel134.BackColor = Color.LightGreen;
+                panel134.BackColor = Color.LightGray;
             }
             if (label235.Text == "0")
             {
-                panel135.BackColor = Color.LightGreen;
+                panel135.BackColor = Color.LightGray;
             }
             if (label236.Text == "0")
             {
-                panel136.BackColor = Color.LightGreen;
+                panel136.BackColor = Color.LightGray;
             }
             if (label237.Text == "0")
             {
-                panel137.BackColor = Color.LightGreen;
+                panel137.BackColor = Color.LightGray;
             }
             if (label238.Text == "0")
             {
-                panel138.BackColor = Color.LightGreen;
+                panel138.BackColor = Color.LightGray;
             }
             if (label239.Text == "0")
             {
-                panel139.BackColor = Color.LightGreen;
+                panel139.BackColor = Color.LightGray;
             }
             if (label240.Text == "0")
             {
-                panel140.BackColor = Color.LightGreen;
+                panel140.BackColor = Color.LightGray;
             }
 
         }
@@ -1795,6 +1829,11 @@ namespace WindowsFormsApplication27
         {
             string a = listBox2.SelectedItem.ToString();
             labelh(a);
+        }
+
+        private void panel41_Paint(object sender, PaintEventArgs e)
+        {
+
         }
        
     }
@@ -1818,6 +1857,7 @@ namespace WindowsFormsApplication27
         public int type;
         public int addr;
     }
+
 }
 
 
