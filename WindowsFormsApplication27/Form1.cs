@@ -816,12 +816,11 @@ namespace WindowsFormsApplication27
             frame.dest_type = (rx_buf[4] >> 4) & 0x0F;
             frame.dest_addr = (rx_buf[4] & 0x0F) * 256 + rx_buf[5];
             frame.type = rx_buf[6];
-            frame.command = rx_buf[7];
 
             for (int i = 0; i < 5; ++i)
-                frame.data1[i] = rx_buf[8 + i];
+                frame.data1[i] = rx_buf[7 + i];
 
-            for (int i = 0, j = 0, k = 13; j < 7; ++k)
+            for (int i = 0, j = 0, k = 12; j < 2; ++k)
             {
                 frame.data2[j, i] = rx_buf[k];
                 ++i;
@@ -872,7 +871,7 @@ namespace WindowsFormsApplication27
                 SetText(b + "- " + e);
                 if (columnRefreshFlag == 1)
                 {
-                    change_color(frame.data1);
+                    change_color(frame.data1, frame.data2);
                 }
 
 
@@ -880,7 +879,7 @@ namespace WindowsFormsApplication27
             return TS;
         }
 
-        void change_color(byte[] data1)
+        void change_color(byte[] data1, byte[,] data2)
         {
 
             VG7 = ((data1[0] >> 7) & 0x01).ToString();
@@ -936,6 +935,8 @@ namespace WindowsFormsApplication27
             //TIG2=
             //THR1=
             //THR2=
+            TIG1 = ((int)(data2[0, 0] >> 7) & 0x01 * (-0x8000)) + ((int)(data2[0, 0] & 0x7F) * 0x0100) + ((int)data2[0, 1]).ToString();
+            TIG2 = ((int)(data2[1, 0] >> 7) & 0x01 * (-0x8000)) + ((int)(data2[1, 0] & 0x7F) * 0x0100) + ((int)data2[1, 1]).ToString();
 
             label41.Text = VG7;
             label42.Text = VG8;
@@ -980,6 +981,9 @@ namespace WindowsFormsApplication27
             label78.Text = BRTHD;
             label79.Text = PGD1;
             label80.Text = PGD2;
+
+            label91.Text = TIG1;
+            label92.Text = TIG2;
 
 
 
@@ -1847,7 +1851,6 @@ namespace WindowsFormsApplication27
         public int dest_type;
         public int dest_addr;
         public int type;
-        public int command;
         public byte[] data1 = new byte[5];
         public byte[,] data2 = new byte[7, 2];
     }

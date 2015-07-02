@@ -904,7 +904,7 @@
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(79, 23);
             this.label36.TabIndex = 24;
-            this.label36.Text = "yubei";
+            this.label36.Text = "RSV";
             // 
             // panel35
             // 
@@ -2205,7 +2205,7 @@
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(79, 23);
             this.label113.TabIndex = 24;
-            this.label113.Text = "yubei";
+            this.label113.Text = "RSV";
             // 
             // panel135
             // 
