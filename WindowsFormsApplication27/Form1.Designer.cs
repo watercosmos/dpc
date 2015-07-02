@@ -497,9 +497,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(12, 126);
+            this.listBox1.Location = new System.Drawing.Point(8, 126);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(550, 472);
+            this.listBox1.Size = new System.Drawing.Size(554, 472);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -755,14 +755,14 @@
             this.panel9.BackColor = System.Drawing.Color.LightGray;
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.label49);
-            this.panel9.Location = new System.Drawing.Point(0, 191);
+            this.panel9.Location = new System.Drawing.Point(0, 192);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(120, 15);
             this.panel9.TabIndex = 136;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(15, 1);
+            this.label9.Location = new System.Drawing.Point(15, 2);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 20);
             this.label9.TabIndex = 8;
@@ -770,7 +770,7 @@
             // 
             // label49
             // 
-            this.label49.Location = new System.Drawing.Point(78, 3);
+            this.label49.Location = new System.Drawing.Point(78, 2);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(79, 20);
             this.label49.TabIndex = 51;
@@ -3145,9 +3145,9 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 12;
-            this.listBox2.Location = new System.Drawing.Point(12, 126);
+            this.listBox2.Location = new System.Drawing.Point(8, 126);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(550, 472);
+            this.listBox2.Size = new System.Drawing.Size(554, 472);
             this.listBox2.TabIndex = 12;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
@@ -3255,7 +3255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 639);
+            this.ClientSize = new System.Drawing.Size(829, 629);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.ServerLoad);
