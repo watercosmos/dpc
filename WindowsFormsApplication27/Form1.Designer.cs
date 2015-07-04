@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication27
+﻿namespace dpc
 {
     partial class Form1
     {

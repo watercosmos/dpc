@@ -13,7 +13,7 @@ using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
 
-namespace WindowsFormsApplication27
+namespace dpc
 {
     public partial class Form1 : Form
     {
@@ -127,6 +127,10 @@ namespace WindowsFormsApplication27
               THR2l = "0";
         public Form1()
         {
+            Form2 f2 = new Form2();
+            f2.Show();//show出欢迎窗口 
+            System.Threading.Thread.Sleep(2000);//欢迎窗口停留时间2s 
+            f2.Close();//关闭欢迎窗口并开始运行主窗口 
             InitializeComponent();
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerLoad_FormClosing);
         }
@@ -383,8 +387,8 @@ namespace WindowsFormsApplication27
             byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
             byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
 
-            TIG1 = ((int)(m00 >> 7) & 0x01 * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
-            TIG2 = ((int)(m10 >> 7) & 0x01 * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+            TIG1 = ((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
+            TIG2 = ((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
 
             VG7 = a1.Substring(0, 1);
             VG8 = a1.Substring(1, 1);
@@ -940,8 +944,8 @@ namespace WindowsFormsApplication27
             //TIG2=
             //THR1=
             //THR2=
-            TIG1 = ((int)(data2[0, 0] >> 7) & 0x01 * (-0x8000)) + ((int)(data2[0, 0] & 0x7F) * 0x0100) + ((int)data2[0, 1]).ToString();
-            TIG2 = ((int)(data2[1, 0] >> 7) & 0x01 * (-0x8000)) + ((int)(data2[1, 0] & 0x7F) * 0x0100) + ((int)data2[1, 1]).ToString();
+            TIG1 = ((int)((data2[0, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[0, 0] & 0x7F) * 0x0100) + ((int)data2[0, 1]).ToString();
+            TIG2 = ((int)((data2[1, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[1, 0] & 0x7F) * 0x0100) + ((int)data2[1, 1]).ToString();
 
             label41.Text = VG7;
             label42.Text = VG8;
@@ -1430,8 +1434,8 @@ namespace WindowsFormsApplication27
             byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
             byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
 
-            TIG1 = ((int)(m00 >> 7) & 0x01 * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
-            TIG2 = ((int)(m10 >> 7) & 0x01 * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+            TIG1 = ((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
+            TIG2 = ((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
 
             VG7l = a1.Substring(0, 1);
             VG8l = a1.Substring(1, 1);
@@ -1858,7 +1862,8 @@ namespace WindowsFormsApplication27
         {
 
         }
-
+        [DllImport("user32")]
+        public static extern int SetParent(int hWndChild, int hWndNewParent);
         private void button3_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
