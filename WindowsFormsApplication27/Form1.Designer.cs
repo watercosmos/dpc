@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.label888 = new System.Windows.Forms.Label();
@@ -337,7 +338,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel888.SuspendLayout();
@@ -466,6 +466,16 @@
             this.tabPage1.Text = "实时显示";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(400, 95);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "选择路径";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(487, 95);
@@ -499,7 +509,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(8, 126);
+            this.listBox1.Location = new System.Drawing.Point(6, 124);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(554, 472);
             this.listBox1.TabIndex = 2;
@@ -3147,7 +3157,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 12;
-            this.listBox2.Location = new System.Drawing.Point(8, 126);
+            this.listBox2.Location = new System.Drawing.Point(6, 124);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(554, 472);
             this.listBox2.TabIndex = 12;
@@ -3247,21 +3257,11 @@
             // 
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label98.Location = new System.Drawing.Point(166, 19);
+            this.label98.Location = new System.Drawing.Point(163, 23);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(212, 48);
             this.label98.TabIndex = 0;
             this.label98.Text = "历史查询";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(400, 95);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "选择路径";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
