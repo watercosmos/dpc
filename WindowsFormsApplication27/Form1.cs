@@ -18,6 +18,7 @@ namespace WindowsFormsApplication27
 
     public partial class Form1 : Form
     {
+        string path = "D:\\wfa";
         List<Connection> connection = new List<Connection>();
         Connection requestTDT = new Connection();
         int columnRefreshFlag = 1;
@@ -138,6 +139,11 @@ namespace WindowsFormsApplication27
         }
         private void ServerLoad(object sender, EventArgs e)
         {
+            if (!Directory.Exists(path))
+            {
+                // Create the directory it does not exist.
+                Directory.CreateDirectory(path);
+            }
             IPAddress ip = IPAddress.Any;
 
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -337,7 +343,7 @@ namespace WindowsFormsApplication27
            
             if (listBox1.SelectedIndex >= 0)
             {
-                label(listBox1.SelectedItem.ToString());
+                clickRealtimeList(listBox1.SelectedItem.ToString());
                 columnRefreshFlag = 0;
                 
             }
@@ -355,7 +361,7 @@ namespace WindowsFormsApplication27
 
         }
        
-        private void label(string la)
+        private void clickRealtimeList(string la)
         {
             aa = la;
             string a1, a2, a3, a4, a5;
@@ -369,6 +375,17 @@ namespace WindowsFormsApplication27
             a4 = c1;
             con(aa.Substring(12, 2));
             a5 = c1;
+
+            byte m00 = Convert.ToByte(aa.Substring(15, 2), 16);
+            byte m01 = Convert.ToByte(aa.Substring(18, 2), 16);
+
+            byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
+            byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
+
+            TIG1 = ((int)(m00 >> 7) & 0x01 * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
+            TIG2 = ((int)(m10 >> 7) & 0x01 * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+
+
             VG7 = a1.Substring(0, 1);
             VG8 = a1.Substring(1, 1);
             WHMP = a1.Substring(2, 1);
@@ -852,7 +869,7 @@ namespace WindowsFormsApplication27
             int day = currentTime.Day;
 
 
-            StreamWriter MyWriter = new StreamWriter("D:\\" + TS + "." + y + "年" + m + "月" + day + "日" + ".txt", true, Encoding.UTF8);
+            StreamWriter MyWriter = new StreamWriter(path + "\\" + TS + "." + y + "年" + m + "月" + day + "日" + ".txt", true, Encoding.UTF8);
 
 
             MyWriter.Write(b + "- " + e + "\n");
@@ -1367,21 +1384,35 @@ namespace WindowsFormsApplication27
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            columnRefreshFlag = 1;
-           
-            listBox1.SetSelected(0, false);
+            try
+            {
+                columnRefreshFlag = 1;
+
+                listBox1.SetSelected(0, false);
+            }
+            catch
+            {
+                MessageBox.Show("无连接");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
-            string type = textBox1.Text,
-                   num = textBox2.Text,
-                   year = textBox3.Text,
-                   month = textBox4.Text,
-                   day = textBox5.Text;
-            string a = "D:\\" + "类型 " + type + " 地址 " + num + "." + year + "年" + month + "月" + day + "日" + ".txt";
-            AddTxtToLst(a, listBox2);
+            try
+            {
+                listBox2.Items.Clear();
+                string type = textBox1.Text,
+                       num = textBox2.Text,
+                       year = textBox3.Text,
+                       month = textBox4.Text,
+                       day = textBox5.Text;
+                string a = path + "\\" + "类型 " + type + " 地址 " + num + "." + year + "年" + month + "月" + day + "日" + ".txt";
+                AddTxtToLst(a, listBox2);
+            }
+            catch
+            {
+                MessageBox.Show("无数据");
+            }
         }
         private void AddTxtToLst(string path, ListBox lst)
         {
@@ -1396,7 +1427,7 @@ namespace WindowsFormsApplication27
             file.Close();
         }
 
-        private void labelh(string la)
+        private void clickHistoryList(string la)
         {
             aa = la;
             string a1, a2, a3, a4, a5;
@@ -1410,6 +1441,16 @@ namespace WindowsFormsApplication27
             a4 = c1;
             con(aa.Substring(12, 2));
             a5 = c1;
+
+            byte m00 = Convert.ToByte(aa.Substring(15, 2), 16);
+            byte m01 = Convert.ToByte(aa.Substring(18, 2), 16);
+
+            byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
+            byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
+
+            TIG1 = ((int)(m00 >> 7) & 0x01 * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
+            TIG2 = ((int)(m10 >> 7) & 0x01 * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+
             VG7l = a1.Substring(0, 1);
             VG8l = a1.Substring(1, 1);
             WHMPl = a1.Substring(2, 1);
@@ -1832,7 +1873,7 @@ namespace WindowsFormsApplication27
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             string a = listBox2.SelectedItem.ToString();
-            labelh(a);
+            clickHistoryList(a);
         }
 
         private void panel41_Paint(object sender, PaintEventArgs e)
