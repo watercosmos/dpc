@@ -337,6 +337,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel888.SuspendLayout();
@@ -450,6 +451,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label97);
             this.tabPage1.Controls.Add(this.label888);
@@ -3251,6 +3253,16 @@
             this.label98.TabIndex = 0;
             this.label98.Text = "历史查询";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(400, 95);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "选择路径";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3675,6 +3687,7 @@
         private System.Windows.Forms.Panel panel53;
         private System.Windows.Forms.Panel panel52;
         private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Button button3;
 
     }
 }

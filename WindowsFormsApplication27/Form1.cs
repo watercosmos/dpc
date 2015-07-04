@@ -15,9 +15,9 @@ using System.Runtime.InteropServices;
 
 namespace WindowsFormsApplication27
 {
-
     public partial class Form1 : Form
     {
+        string defaultpath = "D:\\wfa";
         string path = "D:\\wfa";
         List<Connection> connection = new List<Connection>();
         Connection requestTDT = new Connection();
@@ -132,18 +132,23 @@ namespace WindowsFormsApplication27
         }
         private void ServerLoad_FormClosing(Object sender, FormClosingEventArgs e)
         {
-
             System.Diagnostics.Process.GetCurrentProcess().Kill();
-
-
         }
         private void ServerLoad(object sender, EventArgs e)
         {
-            if (!Directory.Exists(path))
+            if (!Directory.Exists(defaultpath))
             {
                 // Create the directory it does not exist.
-                Directory.CreateDirectory(path);
+                Directory.CreateDirectory(defaultpath);
             }
+            if (!File.Exists(defaultpath + "\\" + "pathfile.txt"))
+            {
+                StreamWriter MyWriter = new StreamWriter(defaultpath + "\\" + "pathfile.txt");
+                MyWriter.Write(path + "\\");
+                MyWriter.Flush();
+                MyWriter.Close();
+            }
+            path = File.ReadAllText(defaultpath + "\\" + "pathfile.txt");
             IPAddress ip = IPAddress.Any;
 
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -192,7 +197,7 @@ namespace WindowsFormsApplication27
                         return;
                     }
 
-                    
+
                     if (step == 1)
                     {
                         if (result[0] == 0x38)
@@ -216,14 +221,13 @@ namespace WindowsFormsApplication27
                     if (step == 5)
                         addr += result[0];
 
-
                     if (step < length)
                         rx_buf[step - 2] = result[0];
                     else if (step == length)
                     {
                         if (result[0] == end)
                             TS = rx_handler(rx_buf, length);
-                        
+
                         step = 1;
                         length = 11;
                         continue;
@@ -321,6 +325,7 @@ namespace WindowsFormsApplication27
             show = comboBox1.Text;
             listBox1.Items.Clear();
         }
+
         private void SetText(string text)
         {
             if (listBox1.InvokeRequired)
@@ -340,15 +345,11 @@ namespace WindowsFormsApplication27
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
             if (listBox1.SelectedIndex >= 0)
             {
                 clickRealtimeList(listBox1.SelectedItem.ToString());
                 columnRefreshFlag = 0;
-                
             }
-           
-
         }
 
         private void con(string hex)
@@ -360,7 +361,7 @@ namespace WindowsFormsApplication27
             c1 = string.Format("{0:00000000}", d);
 
         }
-       
+
         private void clickRealtimeList(string la)
         {
             aa = la;
@@ -384,7 +385,6 @@ namespace WindowsFormsApplication27
 
             TIG1 = ((int)(m00 >> 7) & 0x01 * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
             TIG2 = ((int)(m10 >> 7) & 0x01 * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
-
 
             VG7 = a1.Substring(0, 1);
             VG8 = a1.Substring(1, 1);
@@ -482,7 +482,6 @@ namespace WindowsFormsApplication27
             label93.Text = THR1;
             label94.Text = THR2;
 
-
             if (label41.Text == "1")
             {
                 panel1.BackColor =  Color.LightSkyBlue;
@@ -519,9 +518,6 @@ namespace WindowsFormsApplication27
             {
                 panel9.BackColor =  Color.LightSkyBlue;
             }
-
-
-
 
             if (label50.Text == "1")
             {
@@ -804,7 +800,6 @@ namespace WindowsFormsApplication27
             {
                 panel40.BackColor = Color.LightGray;
             }
-         
         }
 
         private string rx_handler(byte[] rx_buf, int length)
@@ -824,7 +819,7 @@ namespace WindowsFormsApplication27
                     rx_buf[i] = 0x00;
                 }
             }
-           
+
             Frame frame = new Frame();
 
             frame.length = length - 11;
@@ -858,7 +853,7 @@ namespace WindowsFormsApplication27
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < frame.length; i++)
                 sb.Append(rx_buf[7 + i].ToString("X2") + " ");
-            
+
             string b = sb.ToString();
             string e = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff");
 
@@ -868,9 +863,7 @@ namespace WindowsFormsApplication27
             int m = currentTime.Month;
             int day = currentTime.Day;
 
-
             StreamWriter MyWriter = new StreamWriter(path + "\\" + TS + "." + y + "年" + m + "月" + day + "日" + ".txt", true, Encoding.UTF8);
-
 
             MyWriter.Write(b + "- " + e + "\n");
             MyWriter.Flush();
@@ -884,21 +877,17 @@ namespace WindowsFormsApplication27
 
             if (TS == show)
             {
-
                 SetText(b + "- " + e);
                 if (columnRefreshFlag == 1)
                 {
                     change_color(frame.data1, frame.data2);
                 }
-
-
             }
             return TS;
         }
 
         void change_color(byte[] data1, byte[,] data2)
         {
-
             VG7 = ((data1[0] >> 7) & 0x01).ToString();
             VG8 = ((data1[0] >> 6) & 0x01).ToString();
             WHMP = ((data1[0] >> 5) & 0x01).ToString();
@@ -907,7 +896,6 @@ namespace WindowsFormsApplication27
             MCOS = ((data1[0] >> 2) & 0x01).ToString();
             HBD = ((data1[0] >> 1) & 0x01).ToString();
             CFD = ((data1[0] >> 0) & 0x01).ToString();
-
 
             PUD = ((data1[1] >> 7) & 0x01).ToString();
             GPLVD = ((data1[1] >> 6) & 0x01).ToString();
@@ -945,7 +933,7 @@ namespace WindowsFormsApplication27
             PGD1 = ((data1[4] >> 1) & 0x01).ToString();
             PGD2 = ((data1[4] >> 0) & 0x01).ToString();
 
-            //BCW= 
+            //BCW=
             //TIG=
             //THR =
             //TIG1=
@@ -1002,8 +990,6 @@ namespace WindowsFormsApplication27
             label91.Text = TIG1;
             label92.Text = TIG2;
 
-
-
             if (label41.Text == "1")
             {
                 panel1.BackColor =  Color.LightSkyBlue;
@@ -1163,8 +1149,6 @@ namespace WindowsFormsApplication27
                 panel40.BackColor =  Color.LightSkyBlue;
             }
 
-
-
             if (label41.Text == "0")
             {
                 panel1.BackColor = Color.LightGray;
@@ -1323,8 +1307,6 @@ namespace WindowsFormsApplication27
             {
                 panel40.BackColor = Color.LightGray;
             }
-         
-
         }
 
         public ushort ComputeChecksum(byte[] bytes)
@@ -1364,7 +1346,6 @@ namespace WindowsFormsApplication27
             for (int i = 0; i < length - 4; i++)
             {
                 list.Add(rx_buf[i]);
-
             }
             ushort culcrc = ComputeChecksum(list.ToArray());
             ushort crc = (ushort)(rx_buf[length-4] * 256 + rx_buf[length-3]);
@@ -1373,13 +1354,13 @@ namespace WindowsFormsApplication27
             else
                 return false;
         }
+
         public void ListBoxAutoCroll(ListBox lbox)
         {
             //
             //lbox.Items.Add(" ");
             lbox.TopIndex = lbox.Items.Count - (int)(lbox.Height / lbox.ItemHeight);
             //lbox.TopIndex = lbox.Items.Count - 1;
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -1414,6 +1395,7 @@ namespace WindowsFormsApplication27
                 MessageBox.Show("无数据");
             }
         }
+
         private void AddTxtToLst(string path, ListBox lst)
         {
             StreamReader file = new StreamReader(path, Encoding.Default);
@@ -1542,11 +1524,10 @@ namespace WindowsFormsApplication27
             label88.Text = BCW;
             label89.Text = TIG;
             label90.Text = THR;
-            label91.Text = TIG1;
-            label92.Text = TIG2;
+            label191.Text = TIG1;
+            label192.Text = TIG2;
             label93.Text = THR1;
             label94.Text = THR2;
-
 
             if (label201.Text == "1")
             {
@@ -1707,8 +1688,6 @@ namespace WindowsFormsApplication27
                 panel140.BackColor =  Color.LightSkyBlue;
             }
 
-
-
             if (label201.Text == "0")
             {
                 panel101.BackColor = Color.LightGray;
@@ -1867,7 +1846,6 @@ namespace WindowsFormsApplication27
             {
                 panel140.BackColor = Color.LightGray;
             }
-
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -1880,12 +1858,21 @@ namespace WindowsFormsApplication27
         {
 
         }
-       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.ShowDialog();
+            path = fbd.SelectedPath;
+            StreamWriter writepath = new StreamWriter(defaultpath + "\\" + "pathfile.txt", false, Encoding.UTF8);
+            writepath.Write(path);
+            writepath.Flush();
+            writepath.Close();
+        }
     }
 
     public class Frame
     {
-
         public int length;  //从帧中取得， 该长度包括帧头帧尾
         public int src_type;
         public int src_addr;
