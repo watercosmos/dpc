@@ -1785,7 +1785,7 @@
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(250, 20);
             this.label96.TabIndex = 95;
-            this.label96.Text = "模拟数据";
+            this.label96.Text = "模拟量";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label95
@@ -1797,7 +1797,7 @@
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(250, 20);
             this.label95.TabIndex = 94;
-            this.label95.Text = "开关量";
+            this.label95.Text = "位变量";
             this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -3112,7 +3112,7 @@
             this.label182.Name = "label182";
             this.label182.Size = new System.Drawing.Size(250, 20);
             this.label182.TabIndex = 95;
-            this.label182.Text = "模拟数据";
+            this.label182.Text = "模拟量";
             this.label182.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label183
@@ -3124,7 +3124,7 @@
             this.label183.Name = "label183";
             this.label183.Size = new System.Drawing.Size(250, 20);
             this.label183.TabIndex = 94;
-            this.label183.Text = "开关量";
+            this.label183.Text = "位变量";
             this.label183.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel101
