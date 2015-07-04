@@ -859,7 +859,7 @@ namespace dpc
                 sb.Append(rx_buf[7 + i].ToString("X2") + " ");
 
             string b = sb.ToString();
-            string e = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff");
+            string e = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
             System.DateTime currentTime = new System.DateTime();
             currentTime = System.DateTime.Now;

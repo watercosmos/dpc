@@ -8,3 +8,4 @@ C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\dpc.
 C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\DPC.exe
 C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\DPC.pdb
 C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\dpc.Form2.resources
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\bin\Debug\DPC.exe.config
