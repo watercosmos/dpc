@@ -387,8 +387,8 @@ namespace dpc
             byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
             byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
 
-            TIG1 = ((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
-            TIG2 = ((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+            TIG1 = (((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01)).ToString();
+            TIG2 = (((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11)).ToString();
 
             VG7 = a1.Substring(0, 1);
             VG8 = a1.Substring(1, 1);
@@ -944,8 +944,8 @@ namespace dpc
             //TIG2=
             //THR1=
             //THR2=
-            TIG1 = ((int)((data2[0, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[0, 0] & 0x7F) * 0x0100) + ((int)data2[0, 1]).ToString();
-            TIG2 = ((int)((data2[1, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[1, 0] & 0x7F) * 0x0100) + ((int)data2[1, 1]).ToString();
+            TIG1 = (((int)((data2[0, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[0, 0] & 0x7F) * 0x0100) + ((int)data2[0, 1])).ToString();
+            TIG2 = (((int)((data2[1, 0] >> 7) & 0x01) * (-0x8000)) + ((int)(data2[1, 0] & 0x7F) * 0x0100) + ((int)data2[1, 1])).ToString();
 
             label41.Text = VG7;
             label42.Text = VG8;
@@ -1434,8 +1434,8 @@ namespace dpc
             byte m10 = Convert.ToByte(aa.Substring(21, 2), 16);
             byte m11 = Convert.ToByte(aa.Substring(24, 2), 16);
 
-            TIG1 = ((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01).ToString();
-            TIG2 = ((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11).ToString();
+            TIG1 = (((int)((m00 >> 7) & 0x01) * (-0x8000)) + ((int)(m00 & 0x7F) * 0x0100) + ((int)m01)).ToString();
+            TIG2 = (((int)((m10 >> 7) & 0x01) * (-0x8000)) + ((int)(m10 & 0x7F) * 0x0100) + ((int)m11)).ToString();
 
             VG7l = a1.Substring(0, 1);
             VG8l = a1.Substring(1, 1);
@@ -1528,8 +1528,8 @@ namespace dpc
             label88.Text = BCW;
             label89.Text = TIG;
             label90.Text = THR;
-            label191.Text = TIG1;
-            label192.Text = TIG2;
+            label187.Text = TIG1;
+            label188.Text = TIG2;
             label93.Text = THR1;
             label94.Text = THR2;
 

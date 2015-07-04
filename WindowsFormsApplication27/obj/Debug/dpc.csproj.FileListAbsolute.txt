@@ -9,3 +9,12 @@ C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\DPC.
 C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\DPC.pdb
 C:\Users\watercosmos\Desktop\dpc-master\WindowsFormsApplication27\obj\Debug\dpc.Form2.resources
 C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\bin\Debug\DPC.exe.config
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\bin\Debug\DPC.exe
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\bin\Debug\DPC.pdb
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\dpc.csprojResolveAssemblyReference.cache
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\dpc.Form1.resources
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\dpc.Form2.resources
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\dpc.Properties.Resources.resources
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\dpc.csproj.GenerateResource.Cache
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\DPC.exe
+C:\Users\lab\GitHub\dpc\WindowsFormsApplication27\obj\Debug\DPC.pdb
