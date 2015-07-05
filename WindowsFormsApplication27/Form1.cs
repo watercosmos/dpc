@@ -1868,11 +1868,14 @@ namespace dpc
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.ShowDialog();
+            if(fbd.SelectedPath.Length>0)
+            {
             path = fbd.SelectedPath;
             StreamWriter writepath = new StreamWriter(defaultpath + "\\" + "pathfile.txt", false, Encoding.UTF8);
             writepath.Write(path);
             writepath.Flush();
             writepath.Close();
+            }
         }
     }
 
