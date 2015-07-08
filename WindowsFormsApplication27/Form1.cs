@@ -48,7 +48,7 @@ namespace dpc
                THD = "0",
                TROPRA = "0",
                LOFD = "0",
-               RESD = "0",
+            
                PLVD = "0",
                BCFD = "0",
                BCOCD = "0",
@@ -65,11 +65,13 @@ namespace dpc
                OBTD = "0",
                FCD = "0",
                LOND = "0",
-               yubei = "0",
+        
                BCTHD = "0",
                BRTHD = "0",
                PGD1 = "0",
                PGD2 = "0",
+               PGD3 = "0",
+               PGD4 = "0",
                BCW = "0",
                TIG = "0",
                THR = "0",
@@ -96,7 +98,7 @@ namespace dpc
               THDl = "0",
               TROPRAl = "0",
               LOFDl = "0",
-              RESDl = "0",
+       
               PLVDl = "0",
               BCFDl = "0",
               BCOCDl = "0",
@@ -113,11 +115,13 @@ namespace dpc
               OBTDl = "0",
               FCDl = "0",
               LONDl = "0",
-              yubeil = "0",
+      
               BCTHDl = "0",
               BRTHDl = "0",
               PGD1l = "0",
               PGD2l = "0",
+              PGD3l = "0",
+              PGD4l = "0",
               BCWl = "0",
               TIGl = "0",
               THRl = "0",
@@ -409,30 +413,32 @@ namespace dpc
             THD = a2.Substring(7, 1);
             TROPRA = a3.Substring(0, 1);
             LOFD = a3.Substring(1, 1);
-            RESD = a3.Substring(2, 1);
-            PLVD = a3.Substring(3, 1);
+           
+            PLVD = a3.Substring(2, 1);
 
-            BCFD = a3.Substring(4, 1);
-            BCOCD = a3.Substring(5, 1);
-            MMOCD = a3.Substring(6, 1);
-            P110LVD = a3.Substring(7, 1);
-            OVD1 = a4.Substring(0, 1);
-            OVD2 = a4.Substring(1, 1);
-            FCLVD = a4.Substring(2, 1);
-            ESLVD = a4.Substring(3, 1);
-            LGD = a4.Substring(4, 1);
-            PGD = a4.Substring(5, 1);
+            BCFD = a3.Substring(3, 1);
+            BCOCD = a3.Substring(4, 1);
+            MMOCD = a3.Substring(5, 1);
+            P110LVD = a3.Substring(6, 1);
+            OVD1 = a3.Substring(7, 1);
+            OVD2 = a4.Substring(0, 1);
+            FCLVD = a4.Substring(1, 1);
+            ESLVD = a4.Substring(2, 1);
+            LGD = a4.Substring(3, 1);
+            PGD = a4.Substring(4, 1);
 
-            WSD = a4.Substring(6, 1);
-            BSD = a4.Substring(7, 1);
-            OBTD = a5.Substring(0, 1);
-            FCD = a5.Substring(1, 1);
-            LOND = a5.Substring(2, 1);
-            yubei = a5.Substring(3, 1);
-            BCTHD = a5.Substring(4, 1);
-            BRTHD = a5.Substring(5, 1);
-            PGD1 = a5.Substring(6, 1);
-            PGD2 = a5.Substring(7, 1);
+            WSD = a4.Substring(5, 1);
+            BSD = a4.Substring(6, 1);
+            OBTD = a4.Substring(7, 1);
+            FCD = a5.Substring(0, 1);
+            LOND = a5.Substring(1, 1);
+           
+            BCTHD = a5.Substring(2, 1);
+            BRTHD = a5.Substring(3, 1);
+            PGD1 = a5.Substring(4, 1);
+            PGD2 = a5.Substring(5, 1);
+            PGD3 = a5.Substring(6, 1);
+            PGD4 = a5.Substring(7, 1);
 
             label41.Text = VG7;
             label42.Text = VG8;
@@ -453,30 +459,32 @@ namespace dpc
             label56.Text = THD;
             label57.Text = TROPRA;
             label58.Text = LOFD;
-            label59.Text = RESD;
-            label60.Text = PLVD;
+         
+            label59.Text = PLVD;
 
-            label61.Text = BCFD;
-            label62.Text = BCOCD;
-            label63.Text = MMOCD;
-            label64.Text = P110LVD;
-            label65.Text = OVD1;
-            label66.Text = OVD2;
-            label67.Text = FCLVD;
-            label68.Text = ESLVD;
-            label69.Text = LGD;
-            label70.Text = PGD;
+            label60.Text = BCFD;
+            label61.Text = BCOCD;
+            label62.Text = MMOCD;
+            label63.Text = P110LVD;
+            label64.Text = OVD1;
+            label65.Text = OVD2;
+            label66.Text = FCLVD;
+            label67.Text = ESLVD;
+            label68.Text = LGD;
+            label69.Text = PGD;
 
-            label71.Text = WSD;
-            label72.Text = BSD;
-            label73.Text = OBTD;
-            label74.Text = FCD;
-            label75.Text = LOND;
-            label76.Text = yubei;
-            label77.Text = BCTHD;
-            label78.Text = BRTHD;
-            label79.Text = PGD1;
-            label80.Text = PGD2;
+            label70.Text = WSD;
+            label71.Text = BSD;
+            label72.Text = OBTD;
+            label73.Text = FCD;
+            label74.Text = LOND;
+           
+            label75.Text = BCTHD;
+            label76.Text = BRTHD;
+            label77.Text = PGD1;
+            label78.Text = PGD2;
+            label79.Text = PGD3;
+            label80.Text = PGD4;
 
             label88.Text = BCW;
             label89.Text = TIG;
@@ -912,30 +920,32 @@ namespace dpc
 
             TROPRA = ((data1[2] >> 7) & 0x01).ToString();
             LOFD = ((data1[2] >> 6) & 0x01).ToString();
-            RESD = ((data1[2] >> 5) & 0x01).ToString();
-            PLVD = ((data1[2] >> 4) & 0x01).ToString();
-            BCFD = ((data1[2] >> 3) & 0x01).ToString();
-            BCOCD = ((data1[2] >> 2) & 0x01).ToString();
-            MMOCD = ((data1[2] >> 1) & 0x01).ToString();
-            P110LVD = ((data1[2] >> 0) & 0x01).ToString();
+          
+            PLVD = ((data1[2] >> 5) & 0x01).ToString();
+            BCFD = ((data1[2] >> 4) & 0x01).ToString();
+            BCOCD = ((data1[2] >> 3) & 0x01).ToString();
+            MMOCD = ((data1[2] >> 2) & 0x01).ToString();
+            P110LVD = ((data1[2] >> 1) & 0x01).ToString();
 
-            OVD1 = ((data1[3] >> 7) & 0x01).ToString();
-            OVD2 = ((data1[3] >> 6) & 0x01).ToString();
-            FCLVD = ((data1[3] >> 5) & 0x01).ToString();
-            ESLVD = ((data1[3] >> 4) & 0x01).ToString();
-            LGD = ((data1[3] >> 3) & 0x01).ToString();
-            PGD = ((data1[3] >> 2) & 0x01).ToString();
-            WSD = ((data1[3] >> 1) & 0x01).ToString();
-            BSD = ((data1[3] >> 0) & 0x01).ToString();
+            OVD1 = ((data1[2] >> 0) & 0x01).ToString();
+            OVD2 = ((data1[3] >> 7) & 0x01).ToString();
+            FCLVD = ((data1[3] >> 6) & 0x01).ToString();
+            ESLVD = ((data1[3] >> 5) & 0x01).ToString();
+            LGD = ((data1[3] >> 4) & 0x01).ToString();
+            PGD = ((data1[3] >> 3) & 0x01).ToString();
+            WSD = ((data1[3] >> 2) & 0x01).ToString();
+            BSD = ((data1[3] >> 1) & 0x01).ToString();
 
-            OBTD = ((data1[4] >> 7) & 0x01).ToString();
-            FCD = ((data1[4] >> 6) & 0x01).ToString();
-            LOND = ((data1[4] >> 5) & 0x01).ToString();
-            yubei = ((data1[4] >> 4) & 0x01).ToString();
-            BCTHD = ((data1[4] >> 3) & 0x01).ToString();
-            BRTHD = ((data1[4] >> 2) & 0x01).ToString();
-            PGD1 = ((data1[4] >> 1) & 0x01).ToString();
-            PGD2 = ((data1[4] >> 0) & 0x01).ToString();
+            OBTD = ((data1[3] >> 0) & 0x01).ToString();
+            FCD = ((data1[4] >> 7) & 0x01).ToString();
+            LOND = ((data1[4] >> 6) & 0x01).ToString();
+       
+            BCTHD = ((data1[4] >> 5) & 0x01).ToString();
+            BRTHD = ((data1[4] >> 4) & 0x01).ToString();
+            PGD1 = ((data1[4] >> 3) & 0x01).ToString();
+            PGD2 = ((data1[4] >> 2) & 0x01).ToString();
+            PGD3 = ((data1[4] >> 1) & 0x01).ToString();
+            PGD4 = ((data1[4] >> 0) & 0x01).ToString();
 
             //BCW=
             //TIG=
@@ -966,30 +976,32 @@ namespace dpc
             label56.Text = THD;
             label57.Text = TROPRA;
             label58.Text = LOFD;
-            label59.Text = RESD;
-            label60.Text = PLVD;
+       
+            label59.Text = PLVD;
 
-            label61.Text = BCFD;
-            label62.Text = BCOCD;
-            label63.Text = MMOCD;
-            label64.Text = P110LVD;
-            label65.Text = OVD1;
-            label66.Text = OVD2;
-            label67.Text = FCLVD;
-            label68.Text = ESLVD;
-            label69.Text = LGD;
-            label70.Text = PGD;
+            label60.Text = BCFD;
+            label61.Text = BCOCD;
+            label62.Text = MMOCD;
+            label63.Text = P110LVD;
+            label64.Text = OVD1;
+            label65.Text = OVD2;
+            label66.Text = FCLVD;
+            label67.Text = ESLVD;
+            label68.Text = LGD;
+            label69.Text = PGD;
 
-            label71.Text = WSD;
-            label72.Text = BSD;
-            label73.Text = OBTD;
-            label74.Text = FCD;
-            label75.Text = LOND;
-            label76.Text = yubei;
-            label77.Text = BCTHD;
-            label78.Text = BRTHD;
-            label79.Text = PGD1;
-            label80.Text = PGD2;
+            label70.Text = WSD;
+            label71.Text = BSD;
+            label72.Text = OBTD;
+            label73.Text = FCD;
+            label74.Text = LOND;
+          
+            label75.Text = BCTHD;
+            label76.Text = BRTHD;
+            label77.Text = PGD1;
+            label78.Text = PGD2;
+            label79.Text = PGD3;
+            label80.Text = PGD4;
 
             label91.Text = TIG1;
             label92.Text = TIG2;
@@ -1456,30 +1468,32 @@ namespace dpc
             THDl = a2.Substring(7, 1);
             TROPRAl = a3.Substring(0, 1);
             LOFDl = a3.Substring(1, 1);
-            RESDl = a3.Substring(2, 1);
-            PLVDl = a3.Substring(3, 1);
+    
+            PLVDl = a3.Substring(2, 1);
 
-            BCFDl = a3.Substring(4, 1);
-            BCOCDl = a3.Substring(5, 1);
-            MMOCDl = a3.Substring(6, 1);
-            P110LVDl = a3.Substring(7, 1);
-            OVD1l = a4.Substring(0, 1);
-            OVD2l = a4.Substring(1, 1);
-            FCLVDl = a4.Substring(2, 1);
-            ESLVDl = a4.Substring(3, 1);
-            LGDl = a4.Substring(4, 1);
-            PGDl = a4.Substring(5, 1);
+            BCFDl = a3.Substring(3, 1);
+            BCOCDl = a3.Substring(4, 1);
+            MMOCDl = a3.Substring(5, 1);
+            P110LVDl = a3.Substring(6, 1);
+            OVD1l = a3.Substring(7, 1);
+            OVD2l = a4.Substring(0, 1);
+            FCLVDl = a4.Substring(1, 1);
+            ESLVDl = a4.Substring(2, 1);
+            LGDl = a4.Substring(3, 1);
+            PGDl = a4.Substring(4, 1);
 
-            WSDl = a4.Substring(6, 1);
-            BSDl = a4.Substring(7, 1);
-            OBTDl = a5.Substring(0, 1);
-            FCDl = a5.Substring(1, 1);
-            LONDl = a5.Substring(2, 1);
-            yubeil = a5.Substring(3, 1);
-            BCTHDl = a5.Substring(4, 1);
-            BRTHDl = a5.Substring(5, 1);
-            PGD1l = a5.Substring(6, 1);
-            PGD2l = a5.Substring(7, 1);
+            WSDl = a4.Substring(5, 1);
+            BSDl = a4.Substring(6, 1);
+            OBTDl = a4.Substring(7, 1);
+            FCDl = a5.Substring(0, 1);
+            LONDl = a5.Substring(1, 1);
+           
+            BCTHDl = a5.Substring(2, 1);
+            BRTHDl = a5.Substring(3, 1);
+            PGD1l = a5.Substring(4, 1);
+            PGD2l = a5.Substring(5, 1);
+            PGD3l = a5.Substring(6, 1);
+            PGD4l = a5.Substring(7, 1);
 
             label201.Text = VG7l;
             label202.Text = VG8l;
@@ -1500,28 +1514,30 @@ namespace dpc
             label216.Text = THDl;
             label217.Text = TROPRAl;
             label218.Text = LOFDl;
-            label219.Text = RESDl;
-            label220.Text = PLVDl;
+        
+            label219.Text = PLVDl;
 
-            label221.Text = BCFDl;
-            label222.Text = BCOCDl;
-            label223.Text = MMOCDl;
-            label224.Text = P110LVDl;
-            label225.Text = OVD1l;
-            label226.Text = OVD2l;
-            label227.Text = FCLVDl;
-            label228.Text = ESLVDl;
-            label229.Text = LGDl;
-            label230.Text = PGDl;
+            label220.Text = BCFDl;
+            label221.Text = BCOCDl;
+            label222.Text = MMOCDl;
+            label223.Text = P110LVDl;
+            label224.Text = OVD1l;
+            label225.Text = OVD2l;
+            label226.Text = FCLVDl;
+            label227.Text = ESLVDl;
+            label228.Text = LGDl;
+            label229.Text = PGDl;
 
-            label231.Text = WSDl;
-            label232.Text = BSDl;
-            label233.Text = OBTDl;
-            label234.Text = FCDl;
-            label235.Text = LONDl;
-            label236.Text = yubeil;
-            label237.Text = BCTHDl;
-            label238.Text = BRTHDl;
+            label230.Text = WSDl;
+            label231.Text = BSDl;
+            label232.Text = OBTDl;
+            label233.Text = FCDl;
+            label234.Text = LONDl;
+        
+            label235.Text = BCTHDl;
+            label236.Text = BRTHDl;
+            label237.Text = PGD1l;
+            label238.Text = PGD2l;
             label239.Text = PGD1l;
             label240.Text = PGD2l;
 
@@ -1868,13 +1884,13 @@ namespace dpc
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.ShowDialog();
-            if(fbd.SelectedPath.Length>0)
+            if (fbd.SelectedPath.Length > 0)
             {
-            path = fbd.SelectedPath;
-            StreamWriter writepath = new StreamWriter(defaultpath + "\\" + "pathfile.txt", false, Encoding.UTF8);
-            writepath.Write(path);
-            writepath.Flush();
-            writepath.Close();
+                path = fbd.SelectedPath;
+                StreamWriter writepath = new StreamWriter(defaultpath + "\\" + "pathfile.txt", false, Encoding.UTF8);
+                writepath.Write(path);
+                writepath.Flush();
+                writepath.Close();
             }
         }
     }

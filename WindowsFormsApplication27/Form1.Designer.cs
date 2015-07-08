@@ -44,9 +44,11 @@
             this.label86 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.panel43 = new System.Windows.Forms.Panel();
+            this.label106 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.label104 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.panel53 = new System.Windows.Forms.Panel();
@@ -189,9 +191,11 @@
             this.label192 = new System.Windows.Forms.Label();
             this.label189 = new System.Windows.Forms.Label();
             this.panel145 = new System.Windows.Forms.Panel();
+            this.label110 = new System.Windows.Forms.Label();
             this.label193 = new System.Windows.Forms.Label();
             this.label188 = new System.Windows.Forms.Label();
             this.panel144 = new System.Windows.Forms.Panel();
+            this.label108 = new System.Windows.Forms.Label();
             this.label194 = new System.Windows.Forms.Label();
             this.label187 = new System.Windows.Forms.Label();
             this.panel143 = new System.Windows.Forms.Panel();
@@ -635,12 +639,22 @@
             // panel43
             // 
             this.panel43.BackColor = System.Drawing.Color.LightGray;
+            this.panel43.Controls.Add(this.label106);
             this.panel43.Controls.Add(this.label85);
             this.panel43.Controls.Add(this.label92);
             this.panel43.Location = new System.Drawing.Point(0, 540);
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(250, 15);
             this.panel43.TabIndex = 142;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(180, 2);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(23, 12);
+            this.label106.TabIndex = 92;
+            this.label106.Text = "℃";
             // 
             // label85
             // 
@@ -661,12 +675,22 @@
             // panel42
             // 
             this.panel42.BackColor = System.Drawing.Color.LightGray;
+            this.panel42.Controls.Add(this.label104);
             this.panel42.Controls.Add(this.label84);
             this.panel42.Controls.Add(this.label91);
             this.panel42.Location = new System.Drawing.Point(0, 520);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(250, 15);
             this.panel42.TabIndex = 141;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(180, 2);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(23, 12);
+            this.label104.TabIndex = 91;
+            this.label104.Text = "℃";
             // 
             // label84
             // 
@@ -812,7 +836,7 @@
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(79, 20);
             this.label40.TabIndex = 20;
-            this.label40.Text = "PGD2";
+            this.label40.Text = "PGD4";
             // 
             // panel39
             // 
@@ -838,7 +862,7 @@
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(79, 20);
             this.label39.TabIndex = 21;
-            this.label39.Text = "PGD1";
+            this.label39.Text = "PGD3";
             // 
             // panel38
             // 
@@ -864,7 +888,7 @@
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(79, 20);
             this.label37.TabIndex = 23;
-            this.label37.Text = "BRTHD";
+            this.label37.Text = "PGD2";
             // 
             // panel37
             // 
@@ -890,7 +914,7 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(79, 20);
             this.label38.TabIndex = 22;
-            this.label38.Text = "BCTHD";
+            this.label38.Text = "PGD1";
             // 
             // panel36
             // 
@@ -916,7 +940,7 @@
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(79, 23);
             this.label36.TabIndex = 24;
-            this.label36.Text = "RSV";
+            this.label36.Text = "BRTHD";
             // 
             // panel35
             // 
@@ -942,7 +966,7 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(79, 20);
             this.label35.TabIndex = 25;
-            this.label35.Text = "LOND";
+            this.label35.Text = "BCTHD";
             // 
             // panel34
             // 
@@ -968,7 +992,7 @@
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(79, 20);
             this.label34.TabIndex = 26;
-            this.label34.Text = "FCD";
+            this.label34.Text = "LOND";
             // 
             // panel33
             // 
@@ -994,7 +1018,7 @@
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(79, 20);
             this.label33.TabIndex = 27;
-            this.label33.Text = "OBTD";
+            this.label33.Text = "FCD";
             // 
             // panel32
             // 
@@ -1020,7 +1044,7 @@
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(79, 20);
             this.label32.TabIndex = 28;
-            this.label32.Text = "BSD";
+            this.label32.Text = "OBTD";
             // 
             // panel31
             // 
@@ -1046,7 +1070,7 @@
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(79, 20);
             this.label31.TabIndex = 29;
-            this.label31.Text = "WSD";
+            this.label31.Text = "BSD";
             // 
             // panel30
             // 
@@ -1072,7 +1096,7 @@
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(79, 20);
             this.label30.TabIndex = 30;
-            this.label30.Text = "PGD";
+            this.label30.Text = "WSD";
             // 
             // panel29
             // 
@@ -1098,7 +1122,7 @@
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(79, 20);
             this.label29.TabIndex = 31;
-            this.label29.Text = "LGD";
+            this.label29.Text = "PGD";
             // 
             // panel28
             // 
@@ -1124,7 +1148,7 @@
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(79, 20);
             this.label28.TabIndex = 32;
-            this.label28.Text = "ESLVD";
+            this.label28.Text = "LGD";
             // 
             // panel27
             // 
@@ -1150,7 +1174,7 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(79, 20);
             this.label27.TabIndex = 33;
-            this.label27.Text = "FCLVD";
+            this.label27.Text = "ESLVD";
             // 
             // panel26
             // 
@@ -1176,7 +1200,7 @@
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(79, 20);
             this.label26.TabIndex = 34;
-            this.label26.Text = "OVD2";
+            this.label26.Text = "FCLVD";
             // 
             // panel25
             // 
@@ -1202,7 +1226,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(79, 20);
             this.label25.TabIndex = 35;
-            this.label25.Text = "OVD1";
+            this.label25.Text = "OVD2";
             // 
             // panel24
             // 
@@ -1228,7 +1252,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(79, 20);
             this.label24.TabIndex = 36;
-            this.label24.Text = "P110LVD";
+            this.label24.Text = "OVD1";
             // 
             // panel23
             // 
@@ -1254,7 +1278,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(79, 20);
             this.label23.TabIndex = 37;
-            this.label23.Text = "MMOCD";
+            this.label23.Text = "P110LVD";
             // 
             // panel22
             // 
@@ -1280,7 +1304,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(79, 20);
             this.label22.TabIndex = 38;
-            this.label22.Text = "BCOCD";
+            this.label22.Text = "MMOCD";
             // 
             // panel21
             // 
@@ -1306,7 +1330,7 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(79, 20);
             this.label21.TabIndex = 39;
-            this.label21.Text = "BCFD";
+            this.label21.Text = "BCOCD";
             // 
             // panel20
             // 
@@ -1332,7 +1356,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(79, 20);
             this.label20.TabIndex = 19;
-            this.label20.Text = "PLVD";
+            this.label20.Text = "BCFD";
             // 
             // panel19
             // 
@@ -1358,7 +1382,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(79, 20);
             this.label19.TabIndex = 18;
-            this.label19.Text = "RESD";
+            this.label19.Text = "PLVD";
             // 
             // panel18
             // 
@@ -1962,12 +1986,22 @@
             // panel145
             // 
             this.panel145.BackColor = System.Drawing.Color.LightGray;
+            this.panel145.Controls.Add(this.label110);
             this.panel145.Controls.Add(this.label193);
             this.panel145.Controls.Add(this.label188);
             this.panel145.Location = new System.Drawing.Point(0, 540);
             this.panel145.Name = "panel145";
             this.panel145.Size = new System.Drawing.Size(250, 15);
             this.panel145.TabIndex = 139;
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(180, 2);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(23, 12);
+            this.label110.TabIndex = 92;
+            this.label110.Text = "℃";
             // 
             // label193
             // 
@@ -1988,12 +2022,22 @@
             // panel144
             // 
             this.panel144.BackColor = System.Drawing.Color.LightGray;
+            this.panel144.Controls.Add(this.label108);
             this.panel144.Controls.Add(this.label194);
             this.panel144.Controls.Add(this.label187);
             this.panel144.Location = new System.Drawing.Point(0, 520);
             this.panel144.Name = "panel144";
             this.panel144.Size = new System.Drawing.Size(250, 15);
             this.panel144.TabIndex = 138;
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(180, 2);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(23, 12);
+            this.label108.TabIndex = 92;
+            this.label108.Text = "℃";
             // 
             // label194
             // 
@@ -2113,7 +2157,7 @@
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(79, 20);
             this.label105.TabIndex = 20;
-            this.label105.Text = "PGD2";
+            this.label105.Text = "PGD4";
             // 
             // panel139
             // 
@@ -2139,7 +2183,7 @@
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(79, 20);
             this.label107.TabIndex = 21;
-            this.label107.Text = "PGD1";
+            this.label107.Text = "PGD3";
             // 
             // panel138
             // 
@@ -2165,7 +2209,7 @@
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(79, 20);
             this.label109.TabIndex = 23;
-            this.label109.Text = "BRTHD";
+            this.label109.Text = "PGD2";
             // 
             // panel137
             // 
@@ -2191,7 +2235,7 @@
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(79, 20);
             this.label111.TabIndex = 22;
-            this.label111.Text = "BCTHD";
+            this.label111.Text = "PGD1";
             // 
             // panel136
             // 
@@ -2217,7 +2261,7 @@
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(79, 23);
             this.label113.TabIndex = 24;
-            this.label113.Text = "RSV";
+            this.label113.Text = "BRTHD";
             // 
             // panel135
             // 
@@ -2243,7 +2287,7 @@
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(79, 20);
             this.label115.TabIndex = 25;
-            this.label115.Text = "LOND";
+            this.label115.Text = "BCTHD";
             // 
             // panel134
             // 
@@ -2269,7 +2313,7 @@
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(79, 20);
             this.label117.TabIndex = 26;
-            this.label117.Text = "FCD";
+            this.label117.Text = "LOND";
             // 
             // panel133
             // 
@@ -2295,7 +2339,7 @@
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(79, 20);
             this.label119.TabIndex = 27;
-            this.label119.Text = "OBTD";
+            this.label119.Text = "FCD";
             // 
             // panel132
             // 
@@ -2321,7 +2365,7 @@
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(79, 20);
             this.label121.TabIndex = 28;
-            this.label121.Text = "BSD";
+            this.label121.Text = "OBTD";
             // 
             // panel131
             // 
@@ -2347,7 +2391,7 @@
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(79, 20);
             this.label123.TabIndex = 29;
-            this.label123.Text = "WSD";
+            this.label123.Text = "BSD";
             // 
             // panel130
             // 
@@ -2373,7 +2417,7 @@
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(79, 20);
             this.label125.TabIndex = 30;
-            this.label125.Text = "PGD";
+            this.label125.Text = "WSD";
             // 
             // panel129
             // 
@@ -2399,7 +2443,7 @@
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(79, 20);
             this.label127.TabIndex = 31;
-            this.label127.Text = "LGD";
+            this.label127.Text = "PGD";
             // 
             // panel128
             // 
@@ -2425,7 +2469,7 @@
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(79, 20);
             this.label129.TabIndex = 32;
-            this.label129.Text = "ESLVD";
+            this.label129.Text = "LGD";
             // 
             // panel127
             // 
@@ -2451,7 +2495,7 @@
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(79, 20);
             this.label131.TabIndex = 33;
-            this.label131.Text = "FCLVD";
+            this.label131.Text = "ESLVD";
             // 
             // panel126
             // 
@@ -2477,7 +2521,7 @@
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(79, 20);
             this.label133.TabIndex = 34;
-            this.label133.Text = "OVD2";
+            this.label133.Text = "FCLVD";
             // 
             // panel125
             // 
@@ -2503,7 +2547,7 @@
             this.label135.Name = "label135";
             this.label135.Size = new System.Drawing.Size(79, 20);
             this.label135.TabIndex = 35;
-            this.label135.Text = "OVD1";
+            this.label135.Text = "OVD2";
             // 
             // panel124
             // 
@@ -2529,7 +2573,7 @@
             this.label137.Name = "label137";
             this.label137.Size = new System.Drawing.Size(79, 20);
             this.label137.TabIndex = 36;
-            this.label137.Text = "P110LVD";
+            this.label137.Text = "OVD1";
             // 
             // panel123
             // 
@@ -2555,7 +2599,7 @@
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(79, 20);
             this.label139.TabIndex = 37;
-            this.label139.Text = "MMOCD";
+            this.label139.Text = "P110LVD";
             // 
             // panel122
             // 
@@ -2581,7 +2625,7 @@
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(79, 20);
             this.label141.TabIndex = 38;
-            this.label141.Text = "BCOCD";
+            this.label141.Text = "MMOCD";
             // 
             // panel121
             // 
@@ -2607,7 +2651,7 @@
             this.label143.Name = "label143";
             this.label143.Size = new System.Drawing.Size(79, 20);
             this.label143.TabIndex = 39;
-            this.label143.Text = "BCFD";
+            this.label143.Text = "BCOCD";
             // 
             // panel120
             // 
@@ -2633,7 +2677,7 @@
             this.label145.Name = "label145";
             this.label145.Size = new System.Drawing.Size(79, 20);
             this.label145.TabIndex = 19;
-            this.label145.Text = "PLVD";
+            this.label145.Text = "BCFD";
             // 
             // panel119
             // 
@@ -2659,7 +2703,7 @@
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(79, 20);
             this.label147.TabIndex = 18;
-            this.label147.Text = "RESD";
+            this.label147.Text = "PLVD";
             // 
             // panel118
             // 
@@ -3278,7 +3322,9 @@
             this.panel45.ResumeLayout(false);
             this.panel44.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
             this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
             this.panel53.ResumeLayout(false);
             this.panel52.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
@@ -3328,7 +3374,9 @@
             this.panel147.ResumeLayout(false);
             this.panel146.ResumeLayout(false);
             this.panel145.ResumeLayout(false);
+            this.panel145.PerformLayout();
             this.panel144.ResumeLayout(false);
+            this.panel144.PerformLayout();
             this.panel143.ResumeLayout(false);
             this.panel142.ResumeLayout(false);
             this.panel141.ResumeLayout(false);
@@ -3688,6 +3736,10 @@
         private System.Windows.Forms.Panel panel52;
         private System.Windows.Forms.Panel panel51;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label108;
 
     }
 }
