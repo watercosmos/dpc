@@ -12,8 +12,7 @@ using System.Net;
 using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
-
-// edit by luoxiangfan
+using System.Net.NetworkInformation;
 namespace dpc
 {
     public partial class Form1 : Form
@@ -27,10 +26,12 @@ namespace dpc
         string c1;
         string relay_buf;
         bool relay;
-
+        List<string> readtdts=new List<string>();
+        string lastbuffer = "";
         string show;
         StringBuilder strB = new StringBuilder();
         string aa;
+        bool boss = false;
         string VG7 = "0",
                VG8 = "0",
                WHMP = "0",
@@ -134,14 +135,76 @@ namespace dpc
         {
             Form2 f2 = new Form2();
             f2.Show();//show出欢迎窗口 
-            System.Threading.Thread.Sleep(2000);//欢迎窗口停留时间2s 
+            System.Threading.Thread.Sleep(200);//欢迎窗口停留时间2s 
             f2.Close();//关闭欢迎窗口并开始运行主窗口 
             InitializeComponent();
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerLoad_FormClosing);
+            System.Timers.Timer t = new System.Timers.Timer(100);    
+            t.Elapsed += new System.Timers.ElapsedEventHandler(refresh); 
+            t.AutoReset = true;     
+            t.Enabled = true;       
         }
+        public void refresh(object source, System.Timers.ElapsedEventArgs e)
+        {
+            if(File.Exists(defaultpath + "\\" + "connecting" + ".txt"))
+            {
+                string line = "";
+                int i = 0;
+                FileStream fs = new FileStream(defaultpath + "\\" + "connecting" + ".txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                StreamReader sr = new StreamReader(fs);
+                while ((line = sr.ReadLine()) != null)
+                {
+                    readtdts.Add(line);
+                    add(line);
+                    i++;//计数,总共几行
+                }
+                sr.Close();
+            }
+            for (int i = 0; i < comboBox1.Items.Count; i++)
+            {
+                bool co = false;
+             foreach(string re in readtdts)
+             {
+                 if (string.Compare(re, comboBox1.GetItemText(comboBox1.Items[i])) == 0)
+                 { co = true; }
+             }
+                if(!co)
+                { comboBox1.Items.Remove(comboBox1.Items[i]); }
+            }
+            
+            string read= File.ReadAllText(defaultpath + "\\" + comboBox1.Text + "buffer" + ".txt");
+            if (read != lastbuffer)
+            {
+                listBox1.Items.Add(read);
+                lastbuffer = read;
+                if (columnRefreshFlag == 1)
+                {
+                    ListBoxAutoCroll(listBox1);
+                    clickRealtimeList(read);
+                }
+            }
+            
+           
+        }  
         private void ServerLoad_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            if (boss)
+            {
+                 DialogResult dr;
+                 dr=MessageBox.Show("是否关闭后台","是否关闭后台",MessageBoxButtons.YesNo);
+                 if (dr == DialogResult.Yes)
+                 {
+                     StreamWriter s = new StreamWriter(defaultpath + "\\" + "connecting" + ".txt");
+                     s.Write("");
+                     s.Flush();
+                     s.Close();
+                     System.Diagnostics.Process.GetCurrentProcess().Kill();
+                 }
+                 if (dr == DialogResult.No)
+                 {
+                     e.Cancel=true;
+                 }
+            }
         }
         private void ServerLoad(object sender, EventArgs e)
         {
@@ -159,14 +222,37 @@ namespace dpc
             }
             path = File.ReadAllText(defaultpath + "\\" + "pathfile.txt");
             IPAddress ip = IPAddress.Any;
-
-            serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            serverSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-            serverSocket.Bind(new IPEndPoint(ip, 11235));
-            serverSocket.Listen(50);
-            Thread th = new Thread(server);
-            th.Start(serverSocket);
+            if (!PortInUse(11235))
+            {
+                boss = true;
+                serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                serverSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                serverSocket.Bind(new IPEndPoint(ip, 11235));
+                serverSocket.Listen(50);
+                Thread th = new Thread(server);
+                th.Start(serverSocket);
+            }
         }
+        public static bool PortInUse(int port)
+        {
+            bool inUse = false;
+
+            IPGlobalProperties ipProperties = IPGlobalProperties.GetIPGlobalProperties();
+            IPEndPoint[] ipEndPoints = ipProperties.GetActiveTcpListeners();
+
+            foreach (IPEndPoint endPoint in ipEndPoints)
+            {
+                if (endPoint.Port == port)
+                {
+                    inUse = true;
+                    break;
+                }
+            }
+
+            return inUse;
+        }
+
+
         private void server(Object sk)
         {
             while (true)
@@ -201,7 +287,17 @@ namespace dpc
                             thisConnection.type = type;
                             thisConnection.addr = addr;
                             connection.Remove(thisConnection);
-                            remove(TS);
+
+                            string con = "";
+                            foreach (Connection co in connection)
+                            {
+                                con += "类型 " + co.type + " 地址 " + co.addr + "\n";
+                            }
+
+                            StreamWriter conn = new StreamWriter(defaultpath + "\\" + "connecting" + ".txt");
+                            conn.Write(con);
+                            conn.Flush();
+                            conn.Close();
                         }
                         return;
                     }
@@ -857,11 +953,32 @@ namespace dpc
             }
 
             string TS = "类型 " + frame.src_type.ToString() + " 地址 " + frame.src_addr.ToString();
-            add(TS);
-            Connection thisConnection = new Connection();
-            thisConnection.type = frame.src_type;
-            thisConnection.addr = frame.src_addr;
-            connection.Add(thisConnection);
+           // add(TS);
+            bool a = false;
+            foreach (Connection co in connection)
+            {
+                if (co.type == frame.src_type && co.addr == frame.src_addr)
+                { a = true; }
+            }
+            if (!a)
+            {
+                Connection thisConnection = new Connection();
+                thisConnection.type = frame.src_type;
+                thisConnection.addr = frame.src_addr;
+                connection.Add(thisConnection);
+
+                string con = "";
+                foreach (Connection co in connection)
+                {
+                    con += "类型 " + co.type + " 地址 " + co.addr + "\n";
+                }
+
+                StreamWriter conn = new StreamWriter(defaultpath + "\\" + "connecting" + ".txt");
+                conn.Write(con);
+                conn.Flush();
+                conn.Close();
+            }
+            
 
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < frame.length; i++)
@@ -882,20 +999,27 @@ namespace dpc
             MyWriter.Flush();
             MyWriter.Close();
 
+
+            StreamWriter MyWriter1 = new StreamWriter(defaultpath+"\\"+TS+"buffer"+".txt", false, Encoding.UTF8);
+
+            MyWriter1.Write(b + "- " + e + "\n");
+            MyWriter1.Flush();
+            MyWriter1.Close();
+
             if (frame.src_type == requestTDT.type && frame.src_addr == requestTDT.addr)
             {
                 relay_buf = b + "- " + e + "\n";
                 relay = true;
             }
 
-            if (TS == show)
-            {
-                SetText(b + "- " + e);
-                if (columnRefreshFlag == 1)
-                {
-                    change_color(frame.data1, frame.data2);
-                }
-            }
+           // if (TS == show)
+           // {
+          //      SetText(b + "- " + e);
+           //     if (columnRefreshFlag == 1)
+          //      {
+           //         change_color(frame.data1, frame.data2);
+          //      }
+          //  }
             return TS;
         }
 
