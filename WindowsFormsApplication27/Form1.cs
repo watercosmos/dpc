@@ -13,6 +13,7 @@ using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
 
+// edit by luoxiangfan
 namespace dpc
 {
     public partial class Form1 : Form
