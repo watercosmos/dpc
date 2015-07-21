@@ -18,3 +18,13 @@ C:\Users\watercosmos\dpc\dpc\WindowsFormsApplication27\obj\Debug\dpc.Properties.
 C:\Users\watercosmos\dpc\dpc\WindowsFormsApplication27\obj\Debug\dpc.csproj.GenerateResource.Cache
 C:\Users\watercosmos\dpc\dpc\WindowsFormsApplication27\obj\Debug\DPC.exe
 C:\Users\watercosmos\dpc\dpc\WindowsFormsApplication27\obj\Debug\DPC.pdb
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\bin\Debug\DPC.exe.config
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\bin\Debug\DPC.exe
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\bin\Debug\DPC.pdb
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\dpc.csprojResolveAssemblyReference.cache
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\dpc.Form1.resources
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\dpc.Form2.resources
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\dpc.Properties.Resources.resources
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\dpc.csproj.GenerateResource.Cache
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\DPC.exe
+C:\Users\watercosmos\dpc\dpc\form\WindowsFormsApplication27\obj\Debug\DPC.pdb

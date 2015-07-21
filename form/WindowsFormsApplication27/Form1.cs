@@ -31,7 +31,6 @@ namespace dpc
         string show;
         StringBuilder strB = new StringBuilder();
         string aa;
-        bool boss = false;
         string VG7 = "0",
                VG8 = "0",
                WHMP = "0",
@@ -191,23 +190,7 @@ namespace dpc
         }
         private void ServerLoad_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            if (boss)
-            {
-                DialogResult dr;
-                dr = MessageBox.Show("是否关闭后台", "是否关闭后台", MessageBoxButtons.YesNo);
-                if (dr == DialogResult.Yes)
-                {
-                    StreamWriter s = new StreamWriter(defaultpath + "\\" + "connecting" + ".txt");
-                    s.Write("");
-                    s.Flush();
-                    s.Close();
-                    System.Diagnostics.Process.GetCurrentProcess().Kill();
-                }
-                if (dr == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-            }
+         
         }
         private void ServerLoad(object sender, EventArgs e)
         {
