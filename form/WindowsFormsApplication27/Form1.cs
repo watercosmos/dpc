@@ -133,11 +133,10 @@ namespace dpc
         public Form1()
         {
             Form2 f2 = new Form2();
-            f2.Show();//show出欢迎窗口 
+            f2.Show();//show出欢迎窗口
             System.Threading.Thread.Sleep(2000);//欢迎窗口停留时间2s
-            f2.Close();//关闭欢迎窗口并开始运行主窗口 
+            f2.Close();//关闭欢迎窗口并开始运行主窗口
             InitializeComponent();
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerLoad_FormClosing);
             System.Timers.Timer t = new System.Timers.Timer(100);
             t.Elapsed += new System.Timers.ElapsedEventHandler(refresh);
             t.AutoReset = true;
@@ -193,10 +192,7 @@ namespace dpc
                 }
             }
         }
-        private void ServerLoad_FormClosing(Object sender, FormClosingEventArgs e)
-        {
 
-        }
         private void ServerLoad(object sender, EventArgs e)
         {
             if (!Directory.Exists(defaultpath))
@@ -213,7 +209,8 @@ namespace dpc
             }
             path = File.ReadAllText(defaultpath + "\\" + "pathfile.txt");
         }
-        public static bool PortInUse(int port)
+
+        /*public static bool PortInUse(int port)
         {
             bool inUse = false;
 
@@ -230,11 +227,7 @@ namespace dpc
             }
 
             return inUse;
-        }
-
-        delegate void addList(string text);
-        delegate void removeList(string text);
-        delegate void xianshi(string text);
+        }*/
 
         private void add(string text)
         {
@@ -249,6 +242,7 @@ namespace dpc
             }
             comboBox1.Items.Add(text);
         }
+
         private void addtypeandadd(string text)
         {
 
@@ -259,6 +253,7 @@ namespace dpc
             }
             comboBox2.Items.Add(text);
         }
+
         private void remove(string text)
         {
             comboBox1.Items.Remove(text);
@@ -295,12 +290,10 @@ namespace dpc
 
         private void con(string hex)
         {
-
             int b = Convert.ToInt32(hex, 16);
             string c = Convert.ToString(b, 2);
             int d = Convert.ToInt32(c);
             c1 = string.Format("{0:00000000}", d);
-
         }
 
         private void clickRealtimeList(string la)
@@ -1175,11 +1168,8 @@ namespace dpc
             }
         }
 
-
-
         public void ListBoxAutoCroll(ListBox lbox)
         {
-            //
             //lbox.Items.Add(" ");
             lbox.TopIndex = lbox.Items.Count - (int)(lbox.Height / lbox.ItemHeight);
             //lbox.TopIndex = lbox.Items.Count - 1;
@@ -1684,8 +1674,11 @@ namespace dpc
         {
 
         }
+
         [DllImport("user32")]
+
         public static extern int SetParent(int hWndChild, int hWndNewParent);
+
         private void button3_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
