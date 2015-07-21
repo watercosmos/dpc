@@ -160,6 +160,13 @@ namespace dpc
                 }
                 sr.Close();
             }
+            DirectoryInfo TheFolder = new DirectoryInfo(path);
+            FileInfo[] tas = TheFolder.GetFiles();
+            for (int j = 0; j < tas.Length; j++)
+            {
+                if (tas[j].Name.Length > 20)
+                    addtypeandadd("类型 " + tas[j].Name.Substring(3, 1) + " 地址 " + tas[j].Name.Substring(8, 1));
+            }
             for (int i = 0; i < comboBox1.Items.Count; i++)
             {
                 bool co = false;
@@ -256,7 +263,16 @@ namespace dpc
                 comboBox1.Items.Add(text);
             }
         }
+        private void addtypeandadd(string text)
+        {
 
+            for (int i = 0; i < comboBox2.Items.Count; i++)
+            {
+                if (string.Compare(comboBox2.GetItemText(comboBox2.Items[i]), text) == 0)
+                    return;
+            }
+            comboBox2.Items.Add(text);
+        }
         private void remove(string text)
         {
             if (comboBox1.InvokeRequired)
@@ -1218,8 +1234,8 @@ namespace dpc
             try
             {
                 listBox2.Items.Clear();
-                string type = textBox1.Text,
-                       num = textBox2.Text,
+                string type = comboBox2.Text.Substring(3,1),
+                       num = comboBox2.Text.Substring(8,1),
                        year = textBox3.Text,
                        month = textBox4.Text,
                        day = textBox5.Text;

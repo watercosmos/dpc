@@ -183,6 +183,7 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel147 = new System.Windows.Forms.Panel();
             this.label191 = new System.Windows.Forms.Label();
@@ -337,9 +338,6 @@
             this.label102 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label100 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -652,7 +650,7 @@
             this.label106.AutoSize = true;
             this.label106.Location = new System.Drawing.Point(180, 2);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(23, 12);
+            this.label106.Size = new System.Drawing.Size(17, 12);
             this.label106.TabIndex = 92;
             this.label106.Text = "℃";
             // 
@@ -688,7 +686,7 @@
             this.label104.AutoSize = true;
             this.label104.Location = new System.Drawing.Point(180, 2);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(23, 12);
+            this.label104.Size = new System.Drawing.Size(17, 12);
             this.label104.TabIndex = 91;
             this.label104.Text = "℃";
             // 
@@ -1852,6 +1850,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.panel41);
             this.tabPage2.Controls.Add(this.listBox2);
             this.tabPage2.Controls.Add(this.button2);
@@ -1861,9 +1860,6 @@
             this.tabPage2.Controls.Add(this.label102);
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Controls.Add(this.label101);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label100);
-            this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.label99);
             this.tabPage2.Controls.Add(this.label98);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1873,6 +1869,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "历史查询";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(72, 95);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox2.TabIndex = 14;
             // 
             // panel41
             // 
@@ -1999,7 +2003,7 @@
             this.label110.AutoSize = true;
             this.label110.Location = new System.Drawing.Point(180, 2);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(23, 12);
+            this.label110.Size = new System.Drawing.Size(17, 12);
             this.label110.TabIndex = 92;
             this.label110.Text = "℃";
             // 
@@ -2035,7 +2039,7 @@
             this.label108.AutoSize = true;
             this.label108.Location = new System.Drawing.Point(180, 2);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(23, 12);
+            this.label108.Size = new System.Drawing.Size(17, 12);
             this.label108.TabIndex = 92;
             this.label108.Text = "℃";
             // 
@@ -3265,37 +3269,14 @@
             this.label101.TabIndex = 5;
             this.label101.Text = "年";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(131, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 21);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(96, 98);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(29, 12);
-            this.label100.TabIndex = 3;
-            this.label100.Text = "地址";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(46, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(44, 21);
-            this.textBox1.TabIndex = 2;
-            // 
             // label99
             // 
             this.label99.AutoSize = true;
             this.label99.Location = new System.Drawing.Point(10, 98);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(29, 12);
+            this.label99.Size = new System.Drawing.Size(47, 12);
             this.label99.TabIndex = 1;
-            this.label99.Text = "类型";
+            this.label99.Text = "选择TDT";
             // 
             // label98
             // 
@@ -3576,9 +3557,6 @@
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.ListBox listBox2;
@@ -3740,6 +3718,7 @@
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.ComboBox comboBox2;
 
     }
 }
