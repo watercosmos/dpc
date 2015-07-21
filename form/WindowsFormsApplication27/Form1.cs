@@ -192,12 +192,10 @@ namespace dpc
                     clickRealtimeList(read);
                 }
             }
-
-
         }
         private void ServerLoad_FormClosing(Object sender, FormClosingEventArgs e)
         {
-         
+
         }
         private void ServerLoad(object sender, EventArgs e)
         {
@@ -234,9 +232,6 @@ namespace dpc
             return inUse;
         }
 
-
-      
-
         delegate void addList(string text);
         delegate void removeList(string text);
         delegate void xianshi(string text);
@@ -247,21 +242,12 @@ namespace dpc
             //thisConnection.type = type;
             //thisConnection.addr = addr;
             //connection.Add(thisConnection);
-
-            if (comboBox1.InvokeRequired)
+            for (int i = 0; i < comboBox1.Items.Count; i++)
             {
-                addList d = new addList(add);
-                this.Invoke(d, new object[] { text });
+                if (string.Compare(comboBox1.GetItemText(comboBox1.Items[i]), text) == 0)
+                    return;
             }
-            else
-            {
-                for (int i = 0; i < comboBox1.Items.Count; i++)
-                {
-                    if (string.Compare(comboBox1.GetItemText(comboBox1.Items[i]), text) == 0)
-                        return;
-                }
-                comboBox1.Items.Add(text);
-            }
+            comboBox1.Items.Add(text);
         }
         private void addtypeandadd(string text)
         {
@@ -275,15 +261,7 @@ namespace dpc
         }
         private void remove(string text)
         {
-            if (comboBox1.InvokeRequired)
-            {
-                removeList d = new removeList(remove);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                comboBox1.Items.Remove(text);
-            }
+            comboBox1.Items.Remove(text);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -299,18 +277,10 @@ namespace dpc
 
         private void SetText(string text)
         {
-            if (listBox1.InvokeRequired)
+            listBox1.Items.Add(text);
+            if (columnRefreshFlag == 1)
             {
-                xianshi d = new xianshi(SetText);
-                this.Invoke(d, new object[] { text });
-            }
-            else
-            {
-                listBox1.Items.Add(text);
-                if (columnRefreshFlag == 1)
-                {
-                    ListBoxAutoCroll(listBox1);
-                }
+                ListBoxAutoCroll(listBox1);
             }
         }
 
@@ -777,7 +747,7 @@ namespace dpc
             }
         }
 
-      
+
         void change_color(byte[] data1, byte[,] data2)
         {
             VG7 = ((data1[0] >> 7) & 0x01).ToString();
@@ -1205,7 +1175,7 @@ namespace dpc
             }
         }
 
-      
+
 
         public void ListBoxAutoCroll(ListBox lbox)
         {
@@ -1234,8 +1204,8 @@ namespace dpc
             try
             {
                 listBox2.Items.Clear();
-                string type = comboBox2.Text.Substring(3,1),
-                       num = comboBox2.Text.Substring(8,1),
+                string type = comboBox2.Text.Substring(3, 1),
+                       num = comboBox2.Text.Substring(8, 1),
                        year = textBox3.Text,
                        month = textBox4.Text,
                        day = textBox5.Text;
