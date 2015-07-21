@@ -134,7 +134,7 @@ namespace dpc
         {
             Form2 f2 = new Form2();
             f2.Show();//show出欢迎窗口 
-            System.Threading.Thread.Sleep(200);//欢迎窗口停留时间2s 
+            System.Threading.Thread.Sleep(2000);//欢迎窗口停留时间2s
             f2.Close();//关闭欢迎窗口并开始运行主窗口 
             InitializeComponent();
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ServerLoad_FormClosing);

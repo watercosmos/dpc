@@ -3295,6 +3295,7 @@
             this.ClientSize = new System.Drawing.Size(829, 629);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
+            this.Text = "列车数据监控软件";
             this.Load += new System.EventHandler(this.ServerLoad);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
