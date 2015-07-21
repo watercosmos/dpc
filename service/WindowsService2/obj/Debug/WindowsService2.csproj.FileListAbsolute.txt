@@ -1,0 +1,8 @@
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\bin\Debug\WindowsService2.exe.config
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\bin\Debug\WindowsService2.exe
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\bin\Debug\WindowsService2.pdb
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\obj\Debug\WindowsService2.csprojResolveAssemblyReference.cache
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\obj\Debug\WindowsService2.ProjectInstaller.resources
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\obj\Debug\WindowsService2.csproj.GenerateResource.Cache
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\obj\Debug\WindowsService2.exe
+c:\users\watercosmos\documents\visual studio 2013\Projects\WindowsService2\WindowsService2\obj\Debug\WindowsService2.pdb
