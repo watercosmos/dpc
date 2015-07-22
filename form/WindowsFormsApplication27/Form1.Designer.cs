@@ -183,6 +183,9 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label100 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel147 = new System.Windows.Forms.Panel();
@@ -332,12 +335,7 @@
             this.label199 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label103 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label101 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -1850,16 +1848,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label100);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.monthCalendar1);
             this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.panel41);
             this.tabPage2.Controls.Add(this.listBox2);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label103);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.label102);
             this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.label101);
             this.tabPage2.Controls.Add(this.label99);
             this.tabPage2.Controls.Add(this.label98);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1869,6 +1865,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "历史查询";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(222, 98);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(53, 12);
+            this.label100.TabIndex = 17;
+            this.label100.Text = "选择日期";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(396, 93);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(42, 23);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "日历";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(208, 186);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 15;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // comboBox2
             // 
@@ -3213,7 +3235,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(487, 95);
+            this.button2.Location = new System.Drawing.Point(487, 93);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -3221,53 +3243,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(364, 95);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(54, 21);
-            this.textBox5.TabIndex = 10;
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(424, 98);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(17, 12);
-            this.label103.TabIndex = 9;
-            this.label103.Text = "日";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(280, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 21);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(341, 98);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(17, 12);
-            this.label102.TabIndex = 7;
-            this.label102.Text = "月";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(196, 95);
+            this.textBox3.Location = new System.Drawing.Point(281, 95);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(55, 21);
+            this.textBox3.Size = new System.Drawing.Size(94, 21);
             this.textBox3.TabIndex = 6;
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(257, 98);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(17, 12);
-            this.label101.TabIndex = 5;
-            this.label101.Text = "年";
             // 
             // label99
             // 
@@ -3552,12 +3533,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label102;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.ListBox listBox2;
@@ -3720,6 +3696,9 @@
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label label100;
 
     }
 }

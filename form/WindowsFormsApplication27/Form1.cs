@@ -205,8 +205,9 @@ namespace dpc
                 MyWriter.Close();
             }
             path = File.ReadAllText(defaultpath + "\\" + "pathfile.txt");
+            monthCalendar1.Visible = false;
         }
-
+       
         /*public static bool PortInUse(int port)
         {
             bool inUse = false;
@@ -1193,10 +1194,8 @@ namespace dpc
                 listBox2.Items.Clear();
                 string type = comboBox2.Text.Substring(3, 1),
                        num = comboBox2.Text.Substring(8, 1),
-                       year = textBox3.Text,
-                       month = textBox4.Text,
-                       day = textBox5.Text;
-                string a = path + "\\" + "类型 " + type + " 地址 " + num + "." + year + "年" + month + "月" + day + "日" + ".txt";
+                       date = textBox3.Text;
+                string a = path + "\\" + "类型 " + type + " 地址 " + num + "." + date + ".txt";
                 AddTextToList(a, listBox2);
             }
             catch
@@ -1688,6 +1687,20 @@ namespace dpc
                 writepath.Flush();
                 writepath.Close();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (monthCalendar1.Visible)
+            { monthCalendar1.Visible = false; }
+            else
+            { monthCalendar1.Visible = true; }
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            textBox3.Text = monthCalendar1.SelectionEnd.ToString("yyyy" + "年" + "M" + "月" + "d" + "日");
+            monthCalendar1.Visible = false;
         }
     }
 
