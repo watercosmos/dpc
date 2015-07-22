@@ -163,28 +163,28 @@ namespace dpc
                 if (tas[j].Name.Length > 20)
                     addTypeAndAdd("类型 " + tas[j].Name.Substring(3, 1) + " 地址 " + tas[j].Name.Substring(8, 1));
             }
-            for (int i = 0; i < comboBox1.Items.Count; i++)
+            for (int i = 0; i < connectingTdtComboBox.Items.Count; i++)
             {
                 bool co = false;
                 foreach (string re in readtdts)
                 {
-                    if (string.Compare(re, comboBox1.GetItemText(comboBox1.Items[i])) == 0)
+                    if (string.Compare(re, connectingTdtComboBox.GetItemText(connectingTdtComboBox.Items[i])) == 0)
                         co = true;
                 }
                 if (!co)
                 {
-                    comboBox1.Items.Remove(comboBox1.Items[i]);
+                    connectingTdtComboBox.Items.Remove(connectingTdtComboBox.Items[i]);
                 }
             }
 
-            string read = File.ReadAllText(defaultpath + "\\" + comboBox1.Text + "buffer" + ".txt");
+            string read = File.ReadAllText(defaultpath + "\\" + connectingTdtComboBox.Text + "buffer" + ".txt");
             if (read != lastbuffer)
             {
-                listBox1.Items.Add(read);
+                realtimeDataButton.Items.Add(read);
                 lastbuffer = read;
                 if (columnRefreshFlag == 1)
                 {
-                    ListBoxAutoCroll(listBox1);
+                    ListBoxAutoCroll(realtimeDataButton);
                     clickRealtimeList(read);
                 }
             }
@@ -233,55 +233,55 @@ namespace dpc
             //thisConnection.type = type;
             //thisConnection.addr = addr;
             //connection.Add(thisConnection);
-            for (int i = 0; i < comboBox1.Items.Count; i++)
+            for (int i = 0; i < connectingTdtComboBox.Items.Count; i++)
             {
-                if (string.Compare(comboBox1.GetItemText(comboBox1.Items[i]), text) == 0)
+                if (string.Compare(connectingTdtComboBox.GetItemText(connectingTdtComboBox.Items[i]), text) == 0)
                     return;
             }
-            comboBox1.Items.Add(text);
+            connectingTdtComboBox.Items.Add(text);
         }
 
         private void addTypeAndAdd(string text)
         {
 
-            for (int i = 0; i < comboBox2.Items.Count; i++)
+            for (int i = 0; i < histroyTdtComboBox.Items.Count; i++)
             {
-                if (string.Compare(comboBox2.GetItemText(comboBox2.Items[i]), text) == 0)
+                if (string.Compare(histroyTdtComboBox.GetItemText(histroyTdtComboBox.Items[i]), text) == 0)
                     return;
             }
-            comboBox2.Items.Add(text);
+            histroyTdtComboBox.Items.Add(text);
         }
 
         private void remove(string text)
         {
-            comboBox1.Items.Remove(text);
+            connectingTdtComboBox.Items.Remove(text);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void connectingTdtComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 0)
+            if (realtimeDataButton.SelectedIndex >= 0)
             {
-                listBox1.SetSelected(0, false);
+                realtimeDataButton.SetSelected(0, false);
                 columnRefreshFlag = 1;
             }
-            show = comboBox1.Text;
-            listBox1.Items.Clear();
+            show = connectingTdtComboBox.Text;
+            realtimeDataButton.Items.Clear();
         }
 
         private void SetText(string text)
         {
-            listBox1.Items.Add(text);
+            realtimeDataButton.Items.Add(text);
             if (columnRefreshFlag == 1)
             {
-                ListBoxAutoCroll(listBox1);
+                ListBoxAutoCroll(realtimeDataButton);
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void realtimeDataButton_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 0)
+            if (realtimeDataButton.SelectedIndex >= 0)
             {
-                clickRealtimeList(listBox1.SelectedItem.ToString());
+                clickRealtimeList(realtimeDataButton.SelectedItem.ToString());
                 columnRefreshFlag = 0;
             }
         }
@@ -1173,13 +1173,13 @@ namespace dpc
             //lbox.TopIndex = lbox.Items.Count - 1;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void realtimeRefreshButton_Click_1(object sender, EventArgs e)
         {
             try
             {
                 columnRefreshFlag = 1;
 
-                listBox1.SetSelected(0, false);
+                realtimeDataButton.SetSelected(0, false);
             }
             catch
             {
@@ -1187,16 +1187,16 @@ namespace dpc
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void searchButton_Click(object sender, EventArgs e)
         {
             try
             {
-                listBox2.Items.Clear();
-                string type = comboBox2.Text.Substring(3, 1),
-                       num = comboBox2.Text.Substring(8, 1),
-                       date = textBox3.Text;
+                histroyDataListBox.Items.Clear();
+                string type = histroyTdtComboBox.Text.Substring(3, 1),
+                       num = histroyTdtComboBox.Text.Substring(8, 1),
+                       date = dateTextBox.Text;
                 string a = path + "\\" + "类型 " + type + " 地址 " + num + "." + date + ".txt";
-                AddTextToList(a, listBox2);
+                AddTextToList(a, histroyDataListBox);
             }
             catch
             {
@@ -1660,22 +1660,17 @@ namespace dpc
             }
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void histroyDataListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string a = listBox2.SelectedItem.ToString();
+            string a = histroyDataListBox.SelectedItem.ToString();
             clickHistoryList(a);
-        }
-
-        private void panel41_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         [DllImport("user32")]
 
         public static extern int SetParent(int hWndChild, int hWndNewParent);
 
-        private void button3_Click(object sender, EventArgs e)
+        private void choosePathButton_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.ShowDialog();
@@ -1689,7 +1684,7 @@ namespace dpc
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void calenderButton_Click(object sender, EventArgs e)
         {
             if (monthCalendar1.Visible)
             { monthCalendar1.Visible = false; }
@@ -1699,7 +1694,7 @@ namespace dpc
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            textBox3.Text = monthCalendar1.SelectionEnd.ToString("yyyy" + "年" + "M" + "月" + "d" + "日");
+            dateTextBox.Text = monthCalendar1.SelectionEnd.ToString("yyyy" + "年" + "M" + "月" + "d" + "日");
             monthCalendar1.Visible = false;
         }
     }
