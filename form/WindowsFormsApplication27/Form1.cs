@@ -22,10 +22,7 @@ namespace dpc
         List<Connection> connection = new List<Connection>();
         Connection requestTDT = new Connection();
         int columnRefreshFlag = 1;
-        Socket serverSocket;
         string c1;
-        string relay_buf;
-        bool relay;
         List<string> readtdts = new List<string>();
         string lastbuffer = "";
         string show;
@@ -164,7 +161,7 @@ namespace dpc
             for (int j = 0; j < tas.Length; j++)
             {
                 if (tas[j].Name.Length > 20)
-                    addtypeandadd("类型 " + tas[j].Name.Substring(3, 1) + " 地址 " + tas[j].Name.Substring(8, 1));
+                    addTypeAndAdd("类型 " + tas[j].Name.Substring(3, 1) + " 地址 " + tas[j].Name.Substring(8, 1));
             }
             for (int i = 0; i < comboBox1.Items.Count; i++)
             {
@@ -243,7 +240,7 @@ namespace dpc
             comboBox1.Items.Add(text);
         }
 
-        private void addtypeandadd(string text)
+        private void addTypeAndAdd(string text)
         {
 
             for (int i = 0; i < comboBox2.Items.Count; i++)
@@ -288,7 +285,7 @@ namespace dpc
             }
         }
 
-        private void con(string hex)
+        private void convertHextoBin(string hex)
         {
             int b = Convert.ToInt32(hex, 16);
             string c = Convert.ToString(b, 2);
@@ -300,15 +297,15 @@ namespace dpc
         {
             aa = la;
             string a1, a2, a3, a4, a5;
-            con(aa.Substring(0, 2));
+            convertHextoBin(aa.Substring(0, 2));
             a1 = c1;
-            con(aa.Substring(3, 2));
+            convertHextoBin(aa.Substring(3, 2));
             a2 = c1;
-            con(aa.Substring(6, 2));
+            convertHextoBin(aa.Substring(6, 2));
             a3 = c1;
-            con(aa.Substring(9, 2));
+            convertHextoBin(aa.Substring(9, 2));
             a4 = c1;
-            con(aa.Substring(12, 2));
+            convertHextoBin(aa.Substring(12, 2));
             a5 = c1;
 
             byte m00 = Convert.ToByte(aa.Substring(15, 2), 16);
@@ -741,7 +738,7 @@ namespace dpc
         }
 
 
-        void change_color(byte[] data1, byte[,] data2)
+       /* void change_color(byte[] data1, byte[,] data2)
         {
             VG7 = ((data1[0] >> 7) & 0x01).ToString();
             VG8 = ((data1[0] >> 6) & 0x01).ToString();
@@ -1166,7 +1163,7 @@ namespace dpc
             {
                 panel40.BackColor = Color.LightGray;
             }
-        }
+        }*/
 
         public void ListBoxAutoCroll(ListBox lbox)
         {
@@ -1200,7 +1197,7 @@ namespace dpc
                        month = textBox4.Text,
                        day = textBox5.Text;
                 string a = path + "\\" + "类型 " + type + " 地址 " + num + "." + year + "年" + month + "月" + day + "日" + ".txt";
-                AddTxtToLst(a, listBox2);
+                AddTextToList(a, listBox2);
             }
             catch
             {
@@ -1208,7 +1205,7 @@ namespace dpc
             }
         }
 
-        private void AddTxtToLst(string path, ListBox lst)
+        private void AddTextToList(string path, ListBox lst)
         {
             StreamReader file = new StreamReader(path, Encoding.Default);
             string s = "";
@@ -1225,15 +1222,15 @@ namespace dpc
         {
             aa = la;
             string a1, a2, a3, a4, a5;
-            con(aa.Substring(0, 2));
+            convertHextoBin(aa.Substring(0, 2));
             a1 = c1;
-            con(aa.Substring(3, 2));
+            convertHextoBin(aa.Substring(3, 2));
             a2 = c1;
-            con(aa.Substring(6, 2));
+            convertHextoBin(aa.Substring(6, 2));
             a3 = c1;
-            con(aa.Substring(9, 2));
+            convertHextoBin(aa.Substring(9, 2));
             a4 = c1;
-            con(aa.Substring(12, 2));
+            convertHextoBin(aa.Substring(12, 2));
             a5 = c1;
 
             byte m00 = Convert.ToByte(aa.Substring(15, 2), 16);
