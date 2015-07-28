@@ -1877,9 +1877,9 @@
             // 
             // calenderButton
             // 
-            this.calenderButton.Location = new System.Drawing.Point(396, 93);
+            this.calenderButton.Location = new System.Drawing.Point(402, 95);
             this.calenderButton.Name = "calenderButton";
-            this.calenderButton.Size = new System.Drawing.Size(42, 23);
+            this.calenderButton.Size = new System.Drawing.Size(42, 21);
             this.calenderButton.TabIndex = 16;
             this.calenderButton.Text = "日历";
             this.calenderButton.UseVisualStyleBackColor = true;
@@ -1887,7 +1887,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(208, 186);
+            this.monthCalendar1.Location = new System.Drawing.Point(224, 114);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 15;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
@@ -3246,7 +3246,7 @@
             // 
             this.dateTextBox.Location = new System.Drawing.Point(281, 95);
             this.dateTextBox.Name = "dateTextBox";
-            this.dateTextBox.Size = new System.Drawing.Size(94, 21);
+            this.dateTextBox.Size = new System.Drawing.Size(122, 21);
             this.dateTextBox.TabIndex = 6;
             // 
             // label99

@@ -206,6 +206,7 @@ namespace dpc
             }
             path = File.ReadAllText(defaultpath + "\\" + "pathfile.txt");
             monthCalendar1.Visible = false;
+            dateTextBox.Text = DateTime.Now.ToString("yyyy" + "年" + "M" + "月" + "d" + "日");
         }
        
         /*public static bool PortInUse(int port)
@@ -1695,7 +1696,6 @@ namespace dpc
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             dateTextBox.Text = monthCalendar1.SelectionEnd.ToString("yyyy" + "年" + "M" + "月" + "d" + "日");
-            monthCalendar1.Visible = false;
         }
     }
 
